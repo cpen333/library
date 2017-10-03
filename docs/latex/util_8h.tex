@@ -6,10 +6,8 @@ Utility functions.
 
 
 {\ttfamily \#include \char`\"{}os.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$sys/select.\+h$>$}\newline
-{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
-{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$poll.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
 {\ttfamily \#include $<$cstdio$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
@@ -20,12 +18,15 @@ Utility functions.
 \item 
 \mbox{\Hypertarget{util_8h_a3229fb1aca43b37f588b871e1a9e3438}\label{util_8h_a3229fb1aca43b37f588b871e1a9e3438}} 
 \#define \hyperlink{util_8h_a3229fb1aca43b37f588b871e1a9e3438}{D\+E\+L\+E\+T\+E\+\_\+\+M\+E\+T\+H\+OD}
-\begin{DoxyCompactList}\small\item\em Mark constructor/assignment as deleted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Mark constructor/assignment as deleted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_a6bc306171da085f4c7df2c66d2ff8e47}\label{util_8h_a6bc306171da085f4c7df2c66d2ff8e47}} 
+\#define \hyperlink{util_8h_a6bc306171da085f4c7df2c66d2ff8e47}{U\+N\+U\+S\+ED}(X)~(void)(X)
+\begin{DoxyCompactList}\small\item\em Macro for avoiding unused variable warnings. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Dummy $>$ }\\int \hyperlink{util_8h_aadd4070521219770731241a37ed1ae07}{cpen333\+::detail\+::\+\_\+kbhit} ()
-\item 
+int \hyperlink{util_8h_a7809d23d7e9f06eab360b7d7befb902e}{cpen333\+::detail\+::\+\_\+kbhit} ()
+\begin{DoxyCompactList}\small\item\em Keyboard hit function for P\+O\+S\+IX. \end{DoxyCompactList}\item 
 int \hyperlink{util_8h_a68b5b8834128fc802ed44d31064c0416}{cpen333\+::test\+\_\+stdin} ()
 \begin{DoxyCompactList}\small\item\em Tests for keyboard input. \end{DoxyCompactList}\item 
 void \hyperlink{util_8h_a03bbd76906ff61c8fa8efcc3422ff416}{cpen333\+::perror} (const std\+::string \&msg)
@@ -42,14 +43,20 @@ Utility functions.
 Contains functions for formatting strings, testing for data on standard input, and printing system library errors. 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{util_8h_file_aadd4070521219770731241a37ed1ae07}\label{util_8h_file_aadd4070521219770731241a37ed1ae07}} 
+\mbox{\Hypertarget{util_8h_file_a7809d23d7e9f06eab360b7d7befb902e}\label{util_8h_file_a7809d23d7e9f06eab360b7d7befb902e}} 
 \index{util.\+h@{util.\+h}!\+\_\+kbhit@{\+\_\+kbhit}}
 \index{\+\_\+kbhit@{\+\_\+kbhit}!util.\+h@{util.\+h}}
 \subsubsection{\texorpdfstring{\+\_\+kbhit()}{\_kbhit()}}
-{\footnotesize\ttfamily template$<$typename Dummy $>$ \\
-int cpen333\+::detail\+::\+\_\+kbhit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int cpen333\+::detail\+::\+\_\+kbhit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Linux (P\+O\+S\+IX) implementation of \hyperlink{util_8h_aadd4070521219770731241a37ed1ae07}{\+\_\+kbhit()}. Morgan Mc\+Guire, \href{mailto:morgan@cs.brown.edu}{\tt morgan@cs.\+brown.\+edu} \mbox{\Hypertarget{util_8h_file_a5fc400ba28586b822c38e07e85222a0c}\label{util_8h_file_a5fc400ba28586b822c38e07e85222a0c}} 
+
+
+Keyboard hit function for P\+O\+S\+IX. 
+
+\begin{DoxyReturn}{Returns}
+0 if no keyboard input, $>$0 if data on stdin exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{util_8h_file_a5fc400ba28586b822c38e07e85222a0c}\label{util_8h_file_a5fc400ba28586b822c38e07e85222a0c}} 
 \index{util.\+h@{util.\+h}!error@{error}}
 \index{error@{error}!util.\+h@{util.\+h}}
 \subsubsection{\texorpdfstring{error()}{error()}}
@@ -68,7 +75,7 @@ Print message to standard error.
 \index{util.\+h@{util.\+h}!pause@{pause}}
 \index{pause@{pause}!util.\+h@{util.\+h}}
 \subsubsection{\texorpdfstring{pause()}{pause()}}
-{\footnotesize\ttfamily void cpen333\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void cpen333\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

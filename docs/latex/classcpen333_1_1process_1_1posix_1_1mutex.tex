@@ -12,7 +12,7 @@ Inter-\/process named mutual exclusion primitive.
 Inheritance diagram for cpen333\+:\+:process\+:\+:posix\+:\+:mutex\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classcpen333_1_1process_1_1posix_1_1mutex}
+\includegraphics[height=3.000000cm]{classcpen333_1_1process_1_1posix_1_1mutex}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
@@ -24,7 +24,7 @@ using \hyperlink{classcpen333_1_1process_1_1posix_1_1mutex_aac6d3675fcffc52ddf28
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classcpen333_1_1process_1_1posix_1_1mutex_a72ecaf79b2e4ea585b542dc0ed240614}{mutex} (const std\+::string \&name)
+\hyperlink{classcpen333_1_1process_1_1posix_1_1mutex_a72ecaf79b2e4ea585b542dc0ed240614}{mutex} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
 \begin{DoxyCompactList}\small\item\em Constructs or connects to the named mutex. \end{DoxyCompactList}\item 
 void \hyperlink{classcpen333_1_1process_1_1posix_1_1mutex_a07dccda80dc88292fa490ce47dd0faa6}{lock} ()
 \begin{DoxyCompactList}\small\item\em Locks the mutex. \end{DoxyCompactList}\item 
@@ -43,8 +43,9 @@ bool \hyperlink{classcpen333_1_1process_1_1posix_1_1mutex_ac1bcf9576d7470e5d64e1
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \hyperlink{classcpen333_1_1process_1_1posix_1_1mutex_ae5750c148e0408daac498a87d2d9a579}{unlink} (const std\+::string \&name)
+static bool \hyperlink{classcpen333_1_1process_1_1posix_1_1mutex_ae5750c148e0408daac498a87d2d9a579}{unlink} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
 \begin{DoxyCompactList}\small\item\em Unlinks the name without needing to create a resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
@@ -186,7 +187,7 @@ On P\+O\+S\+IX systems, named resources will persist beyond the lifetime of any 
 \end{DoxyReturn}
 
 
-Implements \hyperlink{classcpen333_1_1process_1_1named__resource_a5d33168fee48c9b0c58ab8fd96e230ce}{cpen333\+::process\+::named\+\_\+resource}.
+Implements \hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_ae4033f82dfd068b917a9bca57d3a0c45}{cpen333\+::process\+::impl\+::named\+\_\+resource\+\_\+base}.
 
 \mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1mutex_ae5750c148e0408daac498a87d2d9a579}\label{classcpen333_1_1process_1_1posix_1_1mutex_ae5750c148e0408daac498a87d2d9a579}} 
 \index{cpen333\+::process\+::posix\+::mutex@{cpen333\+::process\+::posix\+::mutex}!unlink@{unlink}}

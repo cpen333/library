@@ -1,0 +1,137 @@
+\hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server}{}\section{cpen333\+:\+:process\+:\+:windows\+:\+:pipe\+\_\+server Class Reference}
+\label{classcpen333_1_1process_1_1windows_1_1pipe__server}\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
+
+
+Pipe server.  
+
+
+
+
+{\ttfamily \#include $<$pipe.\+h$>$}
+
+Inheritance diagram for cpen333\+:\+:process\+:\+:windows\+:\+:pipe\+\_\+server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcpen333_1_1process_1_1windows_1_1pipe__server}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_a56a0e55c0db7c3be6b6c489e761f219a}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_a56a0e55c0db7c3be6b6c489e761f219a}} 
+\hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a56a0e55c0db7c3be6b6c489e761f219a}{pipe\+\_\+server} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
+\begin{DoxyCompactList}\small\item\em Default constructor, creates a pipe server that listens for new connections. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_acea2e918a6ba35f8eb856542ee697334}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_acea2e918a6ba35f8eb856542ee697334}} 
+\hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_acea2e918a6ba35f8eb856542ee697334}{$\sim$pipe\+\_\+server} ()
+\begin{DoxyCompactList}\small\item\em Destructor, closes the pipe server. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}{start} ()
+\begin{DoxyCompactList}\small\item\em Starts listening for connections. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_ab46c9f9214309d9d8bd8115758863259}{accept} (\hyperlink{classcpen333_1_1process_1_1windows_1_1pipe}{pipe} \&client)
+\begin{DoxyCompactList}\small\item\em Accepts a client connection. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a4c27e283566395d1f7236bff91413737}{close} ()
+\begin{DoxyCompactList}\small\item\em Close the server socket. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_aa3f9fb4fd88042b09e130cd616815fe1}{unlink} ()
+\begin{DoxyCompactList}\small\item\em Detaches the name from the named resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a33351b0b15900c6238d592b9642b1f68}{unlink} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
+\begin{DoxyCompactList}\small\item\em Unlinks the name without needing to create a resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pipe server. 
+
+Implementation of a named pipe server that listens for connections. The server is N\+OT started automatically. To start listening for connections, call the \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}{start()} function. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_ab46c9f9214309d9d8bd8115758863259}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_ab46c9f9214309d9d8bd8115758863259}} 
+\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}!accept@{accept}}
+\index{accept@{accept}!cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
+\subsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::pipe\+\_\+server\+::accept (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1process_1_1windows_1_1pipe}{pipe} \&}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accepts a client connection. 
+
+This method will block until a client connects to the pipe server. Upon connection, the provide client is populated and automatically opened.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & connected pipe client \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_a4c27e283566395d1f7236bff91413737}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_a4c27e283566395d1f7236bff91413737}} 
+\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}!close@{close}}
+\index{close@{close}!cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::pipe\+\_\+server\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Close the server socket. 
+
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}} 
+\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}!start@{start}}
+\index{start@{start}!cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::pipe\+\_\+server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts listening for connections. 
+
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_aa3f9fb4fd88042b09e130cd616815fe1}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_aa3f9fb4fd88042b09e130cd616815fe1}} 
+\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}!unlink@{unlink}}
+\index{unlink@{unlink}!cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
+\subsubsection{\texorpdfstring{unlink()}{unlink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::pipe\+\_\+server\+::unlink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Detaches the name from the named resource. 
+
+On P\+O\+S\+IX systems, named resources will persist beyond the lifetime of any process that uses them as long as the name has not been unlinked (or until the system is rebooted). Calling {\ttfamily unlink} will detach the name, allowing the resource to be freed once all current users have exited.
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if unlink is successful, {\ttfamily false} if unlinking is not supported or if an error has occurred. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_ae4033f82dfd068b917a9bca57d3a0c45}{cpen333\+::process\+::impl\+::named\+\_\+resource\+\_\+base}.
+
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_a33351b0b15900c6238d592b9642b1f68}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_a33351b0b15900c6238d592b9642b1f68}} 
+\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}!unlink@{unlink}}
+\index{unlink@{unlink}!cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
+\subsubsection{\texorpdfstring{unlink()}{unlink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool cpen333\+::process\+::windows\+::pipe\+\_\+server\+::unlink (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Unlinks the name without needing to create a resource. 
+
+Implementers should also provide a static method for unlinking. The purpose is mainly for clean-\/up of existing resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & desired resource name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if unlink successful, {\ttfamily false} if not successful or not supported 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/windows/\hyperlink{impl_2windows_2pipe_8h}{pipe.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,253 @@
+\hypertarget{classcpen333_1_1process_1_1basic__pipe}{}\section{cpen333\+:\+:process\+:\+:basic\+\_\+pipe Class Reference}
+\label{classcpen333_1_1process_1_1basic__pipe}\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+
+
+Inter-\/process pipe emulated using a shared F\+I\+F\+O-\/style queue.  
+
+
+
+
+{\ttfamily \#include $<$basic\+\_\+pipe.\+h$>$}
+
+Inheritance diagram for cpen333\+:\+:process\+:\+:basic\+\_\+pipe\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcpen333_1_1process_1_1basic__pipe}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcpen333_1_1process_1_1basic__pipe_af61543ec6433ad27cac0433a138199b7}{basic\+\_\+pipe} (const std\+::string \&name, size\+\_\+t size=1024)
+\begin{DoxyCompactList}\small\item\em Constructs a named pipe instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a2b449884a292300321fc2cb9b5fb6500}\label{classcpen333_1_1process_1_1basic__pipe_a2b449884a292300321fc2cb9b5fb6500}} 
+virtual \hyperlink{classcpen333_1_1process_1_1basic__pipe_a2b449884a292300321fc2cb9b5fb6500}{$\sim$basic\+\_\+pipe} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a969c7f9d0069b13e8fd3c50d98cb94a5}{write} (const void $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Writes data to the pipe. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a41084217cb3913a8db572b012c2a0ea5}{write} (const T \&data)
+\begin{DoxyCompactList}\small\item\em Writes an object to the pipe. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a31a394d2126fdcf8cfaace1733f941ff}{write} (const T $\ast$data)
+\begin{DoxyCompactList}\small\item\em Writes an object to the pipe. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a4176320551b61bec3c52d77c6a9a75d2}{read} (void $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reads data from the pipe. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a61e5b27ee80ba854cbacbfe82b1675e8}{read} (T $\ast$data)
+\begin{DoxyCompactList}\small\item\em Reads an object from the pipe. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classcpen333_1_1process_1_1basic__pipe_a409e54ba4fd21f9769105804eb118fae}{available} ()
+\begin{DoxyCompactList}\small\item\em Determines the number of bytes currently remaining in the pipe. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a344a8291b20be973ade784922bdf37eb}{unlink} ()
+\begin{DoxyCompactList}\small\item\em Detaches the name from the named resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_afef75c200701b049e58942210f0d6030}{unlink} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Unlinks the name without needing to create a resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Inter-\/process pipe emulated using a shared F\+I\+F\+O-\/style queue. 
+
+Allows sending/receiving of unstructured information between two connected processes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_af61543ec6433ad27cac0433a138199b7}\label{classcpen333_1_1process_1_1basic__pipe_af61543ec6433ad27cac0433a138199b7}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!basic\+\_\+pipe@{basic\+\_\+pipe}}
+\index{basic\+\_\+pipe@{basic\+\_\+pipe}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{basic\+\_\+pipe()}{basic\_pipe()}}
+{\footnotesize\ttfamily cpen333\+::process\+::basic\+\_\+pipe\+::basic\+\_\+pipe (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{size = {\ttfamily 1024} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a named pipe instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & identifier for creating or connecting to an existing inter-\/process pipe \\
+\hline
+{\em size} & if creating, the maximum number of bytes that can be stored in the pipe without blocking \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a409e54ba4fd21f9769105804eb118fae}\label{classcpen333_1_1process_1_1basic__pipe_a409e54ba4fd21f9769105804eb118fae}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!available@{available}}
+\index{available@{available}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily size\+\_\+t cpen333\+::process\+::basic\+\_\+pipe\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines the number of bytes currently remaining in the pipe. 
+
+This method should rarely be used, as the number of bytes is subject to change rapidly. One possible use-\/case is if there is a single reader, and the reader wants to check if there is any data available.
+
+\begin{DoxyReturn}{Returns}
+number of bytes currently remaining in the pipe 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a4176320551b61bec3c52d77c6a9a75d2}\label{classcpen333_1_1process_1_1basic__pipe_a4176320551b61bec3c52d77c6a9a75d2}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!read@{read}}
+\index{read@{read}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::basic\+\_\+pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads data from the pipe. 
+
+Reads the specified number of bytes from the head of the pipe. This method will block until the desired number of bytes are read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & memory address to fill with pipe contents \\
+\hline
+{\em size} & number of bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a61e5b27ee80ba854cbacbfe82b1675e8}\label{classcpen333_1_1process_1_1basic__pipe_a61e5b27ee80ba854cbacbfe82b1675e8}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!read@{read}}
+\index{read@{read}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool cpen333\+::process\+::basic\+\_\+pipe\+::read (\begin{DoxyParamCaption}\item[{T $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads an object from the pipe. 
+
+Convenience method for reading an object from the pipe, auto-\/detecting the appropriate number of bytes to read. This method will block until the complete object is read.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of object \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & pointer to object to populate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a344a8291b20be973ade784922bdf37eb}\label{classcpen333_1_1process_1_1basic__pipe_a344a8291b20be973ade784922bdf37eb}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!unlink@{unlink}}
+\index{unlink@{unlink}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{unlink()}{unlink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::basic\+\_\+pipe\+::unlink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Detaches the name from the named resource. 
+
+On P\+O\+S\+IX systems, named resources will persist beyond the lifetime of any process that uses them as long as the name has not been unlinked (or until the system is rebooted). Calling {\ttfamily unlink} will detach the name, allowing the resource to be freed once all current users have exited.
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if unlink is successful, {\ttfamily false} if unlinking is not supported or if an error has occurred. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classcpen333_1_1process_1_1named__resource_a5d33168fee48c9b0c58ab8fd96e230ce}{cpen333\+::process\+::named\+\_\+resource}.
+
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_afef75c200701b049e58942210f0d6030}\label{classcpen333_1_1process_1_1basic__pipe_afef75c200701b049e58942210f0d6030}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!unlink@{unlink}}
+\index{unlink@{unlink}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{unlink()}{unlink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool cpen333\+::process\+::basic\+\_\+pipe\+::unlink (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Unlinks the name without needing to create a resource. 
+
+Implementers should also provide a static method for unlinking. The purpose is mainly for clean-\/up of existing resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & desired resource name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if unlink successful, {\ttfamily false} if not successful or not supported 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a969c7f9d0069b13e8fd3c50d98cb94a5}\label{classcpen333_1_1process_1_1basic__pipe_a969c7f9d0069b13e8fd3c50d98cb94a5}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!write@{write}}
+\index{write@{write}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::basic\+\_\+pipe\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes data to the pipe. 
+
+If the pipe becomes full, will block until there is room to complete the message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & data to write \\
+\hline
+{\em size} & number of bytes to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if write is successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a41084217cb3913a8db572b012c2a0ea5}\label{classcpen333_1_1process_1_1basic__pipe_a41084217cb3913a8db572b012c2a0ea5}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!write@{write}}
+\index{write@{write}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool cpen333\+::process\+::basic\+\_\+pipe\+::write (\begin{DoxyParamCaption}\item[{const T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes an object to the pipe. 
+
+Convenience method for writing objects to the pipe, auto-\/detecting the appropriate number of bytes. This method will block until there is sufficient room to finish writing the object
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of object to write \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & reference to data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if write is successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a31a394d2126fdcf8cfaace1733f941ff}\label{classcpen333_1_1process_1_1basic__pipe_a31a394d2126fdcf8cfaace1733f941ff}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!write@{write}}
+\index{write@{write}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool cpen333\+::process\+::basic\+\_\+pipe\+::write (\begin{DoxyParamCaption}\item[{const T $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes an object to the pipe. 
+
+Convenience method for writing objects to the pipe, auto-\/detecting the appropriate number of bytes. This method will block until there is sufficient room to finish writing the object
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of object to write \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & pointer to data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if write is successful, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/\hyperlink{basic__pipe_8h}{basic\+\_\+pipe.\+h}\end{DoxyCompactItemize}

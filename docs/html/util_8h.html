@@ -75,10 +75,8 @@ $(function() {
 <p>Utility functions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="os_8h_source.html">os.h</a>&quot;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;sys/select.h&gt;</code><br />
-<code>#include &lt;sys/ioctl.h&gt;</code><br />
-<code>#include &lt;termios.h&gt;</code><br />
+<code>#include &lt;poll.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -93,12 +91,16 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a3229fb1aca43b37f588b871e1a9e3438">DELETE_METHOD</a></td></tr>
 <tr class="memdesc:a3229fb1aca43b37f588b871e1a9e3438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark constructor/assignment as deleted. <br /></td></tr>
 <tr class="separator:a3229fb1aca43b37f588b871e1a9e3438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc306171da085f4c7df2c66d2ff8e47"><td class="memItemLeft" align="right" valign="top"><a id="a6bc306171da085f4c7df2c66d2ff8e47"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a6bc306171da085f4c7df2c66d2ff8e47">UNUSED</a>(X)&#160;&#160;&#160;(void)(X)</td></tr>
+<tr class="memdesc:a6bc306171da085f4c7df2c66d2ff8e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for avoiding unused variable warnings. <br /></td></tr>
+<tr class="separator:a6bc306171da085f4c7df2c66d2ff8e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aadd4070521219770731241a37ed1ae07"><td class="memTemplParams" colspan="2">template&lt;typename Dummy &gt; </td></tr>
-<tr class="memitem:aadd4070521219770731241a37ed1ae07"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="util_8h.html#aadd4070521219770731241a37ed1ae07">cpen333::detail::_kbhit</a> ()</td></tr>
-<tr class="separator:aadd4070521219770731241a37ed1ae07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7809d23d7e9f06eab360b7d7befb902e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a7809d23d7e9f06eab360b7d7befb902e">cpen333::detail::_kbhit</a> ()</td></tr>
+<tr class="memdesc:a7809d23d7e9f06eab360b7d7befb902e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard hit function for POSIX.  <a href="util_8h.html#a7809d23d7e9f06eab360b7d7befb902e">More...</a><br /></td></tr>
+<tr class="separator:a7809d23d7e9f06eab360b7d7befb902e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68b5b8834128fc802ed44d31064c0416"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a68b5b8834128fc802ed44d31064c0416">cpen333::test_stdin</a> ()</td></tr>
 <tr class="memdesc:a68b5b8834128fc802ed44d31064c0416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests for keyboard input.  <a href="util_8h.html#a68b5b8834128fc802ed44d31064c0416">More...</a><br /></td></tr>
 <tr class="separator:a68b5b8834128fc802ed44d31064c0416"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,13 +118,14 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Utility functions. </p>
 <p>Contains functions for formatting strings, testing for data on standard input, and printing system library errors. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="file_aadd4070521219770731241a37ed1ae07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aadd4070521219770731241a37ed1ae07">&#9670;&nbsp;</a></span>_kbhit()</h2>
+<a id="file_a7809d23d7e9f06eab360b7d7befb902e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a7809d23d7e9f06eab360b7d7befb902e">&#9670;&nbsp;</a></span>_kbhit()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Dummy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int cpen333::detail::_kbhit </td>
@@ -131,8 +134,15 @@ template&lt;typename Dummy &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Linux (POSIX) implementation of <a class="el" href="util_8h.html#aadd4070521219770731241a37ed1ae07">_kbhit()</a>. Morgan McGuire, <a href="#" onclick="location.href='mai'+'lto:'+'mor'+'ga'+'n@c'+'s.'+'bro'+'wn'+'.ed'+'u'; return false;">morga<span style="display: none;">.nosp@m.</span>n@cs<span style="display: none;">.nosp@m.</span>.brow<span style="display: none;">.nosp@m.</span>n.ed<span style="display: none;">.nosp@m.</span>u</a> </p>
+
+<p>Keyboard hit function for POSIX. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 if no keyboard input, &gt;0 if data on stdin exists </dd></dl>
 
 </div>
 </div>
@@ -175,6 +185,9 @@ template&lt;typename Dummy &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void cpen333::pause </td>
@@ -183,6 +196,11 @@ template&lt;typename Dummy &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Pause for input. </p>

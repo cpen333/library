@@ -1,0 +1,41 @@
+\hypertarget{impl_2windows_2pipe_8h}{}\section{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/windows/pipe.h File Reference}
+\label{impl_2windows_2pipe_8h}\index{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/windows/pipe.\+h@{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/windows/pipe.\+h}}
+
+
+Windows implementation of a pipe.  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../named\+\_\+resource\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../../util.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe}{cpen333\+::process\+::windows\+::pipe}
+\begin{DoxyCompactList}\small\item\em Interprocess pipe. \end{DoxyCompactList}\item 
+class \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server}{cpen333\+::process\+::windows\+::pipe\+\_\+server}
+\begin{DoxyCompactList}\small\item\em Pipe server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{impl_2windows_2pipe_8h_a9f918755b601cf4bffca775992e6fb90}\label{impl_2windows_2pipe_8h_a9f918755b601cf4bffca775992e6fb90}} 
+\#define \hyperlink{impl_2windows_2pipe_8h_a9f918755b601cf4bffca775992e6fb90}{N\+O\+M\+I\+N\+M\+AX}~1
+\begin{DoxyCompactList}\small\item\em Prevent windows from defining min(), max() macros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2windows_2pipe_8h_a96f19bfac64ce5ee7dad6c3a02cc264c}\label{impl_2windows_2pipe_8h_a96f19bfac64ce5ee7dad6c3a02cc264c}} 
+\#define \hyperlink{impl_2windows_2pipe_8h_a96f19bfac64ce5ee7dad6c3a02cc264c}{P\+I\+P\+E\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE}~1024
+\begin{DoxyCompactList}\small\item\em Default pipe buffer size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2windows_2pipe_8h_a680b1cad237ce0afb8cd8d6b09da8768}\label{impl_2windows_2pipe_8h_a680b1cad237ce0afb8cd8d6b09da8768}} 
+\#define \hyperlink{impl_2windows_2pipe_8h_a680b1cad237ce0afb8cd8d6b09da8768}{W\+I\+N\+D\+O\+W\+S\+\_\+\+P\+I\+P\+E\+\_\+\+P\+R\+E\+F\+IX}~\char`\"{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}.\textbackslash{}\textbackslash{}pipe\textbackslash{}\textbackslash{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Pipe prefix on Windows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2windows_2pipe_8h_a2daaae4628fa074b831c6941901ee1e9}\label{impl_2windows_2pipe_8h_a2daaae4628fa074b831c6941901ee1e9}} 
+\#define \hyperlink{impl_2windows_2pipe_8h_a2daaae4628fa074b831c6941901ee1e9}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+I\+P\+E\+\_\+\+N\+A\+ME}~\char`\"{}uninitialized\+\_\+pipe\char`\"{}
+\begin{DoxyCompactList}\small\item\em Default name for uninitialized pipe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Windows implementation of a pipe. 
+

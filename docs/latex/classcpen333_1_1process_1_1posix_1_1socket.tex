@@ -1,0 +1,228 @@
+\hypertarget{classcpen333_1_1process_1_1posix_1_1socket}{}\section{cpen333\+:\+:process\+:\+:posix\+:\+:socket Class Reference}
+\label{classcpen333_1_1process_1_1posix_1_1socket}\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+
+
+Socket client.  
+
+
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a37b973439d588e1a3b3f43381e9fef55}{socket} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, connects to localhost at the default port. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a0cb25f1ab47ee533f8c5a9b8968357bd}{socket} (const std\+::string \&server, int port)
+\begin{DoxyCompactList}\small\item\em Constructor specifying server address and port. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a8c0d036039c11145cc0b342b4006a0aa}{socket} (\hyperlink{classcpen333_1_1process_1_1posix_1_1socket}{socket} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move-\/constructor. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1socket}{socket} \& \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a0ebb354104529fd60a05b9de29919ce8}{operator=} (\hyperlink{classcpen333_1_1process_1_1posix_1_1socket}{socket} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move-\/assignment. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1socket_ad5dc9ffd6311247114538ec84f2c08a0}{$\sim$socket} ()
+\begin{DoxyCompactList}\small\item\em Destructor, closes socket if not already closed. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a0ac2e0452989cca9e6279602a8d73854}{open} ()
+\begin{DoxyCompactList}\small\item\em Opens socket if not already open, attempts to connect to server. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a80d3d77a066ebc082196bb2182021818}{write} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Sends string through the socket, including the terminating zero. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a60ba24c07c24cfb34ef77b0f137cfc32}{write} (const void $\ast$buff, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sends bytes through the socket. \end{DoxyCompactList}\item 
+ssize\+\_\+t \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_aaadcd25ad297fc3ca9199f06a5ba7cc8}{read} (void $\ast$buff, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Receives bytes of data from a socket. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a37ac1c8f8ba6dec89066dc1721d0bb0c}{close} ()
+\begin{DoxyCompactList}\small\item\em Closes the socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_aba37c0ea463da9263b0712d3b3389066}{socket\+\_\+server}
+\begin{DoxyCompactList}\small\item\em P\+O\+S\+IX implementation of a socket server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Socket client. 
+
+P\+O\+S\+I\+X/\+B\+SD implementation of a socket client. The client is N\+OT connected automatically. To start the connection, call the \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a0ac2e0452989cca9e6279602a8d73854}{open()} function. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a37b973439d588e1a3b3f43381e9fef55}\label{classcpen333_1_1process_1_1posix_1_1socket_a37b973439d588e1a3b3f43381e9fef55}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!socket@{socket}}
+\index{socket@{socket}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{socket()}{socket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cpen333\+::process\+::posix\+::socket\+::socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor, connects to localhost at the default port. 
+
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a0cb25f1ab47ee533f8c5a9b8968357bd}\label{classcpen333_1_1process_1_1posix_1_1socket_a0cb25f1ab47ee533f8c5a9b8968357bd}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!socket@{socket}}
+\index{socket@{socket}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{socket()}{socket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cpen333\+::process\+::posix\+::socket\+::socket (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{server,  }\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor specifying server address and port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & server address \\
+\hline
+{\em port} & port number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a8c0d036039c11145cc0b342b4006a0aa}\label{classcpen333_1_1process_1_1posix_1_1socket_a8c0d036039c11145cc0b342b4006a0aa}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!socket@{socket}}
+\index{socket@{socket}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{socket()}{socket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cpen333\+::process\+::posix\+::socket\+::socket (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1process_1_1posix_1_1socket}{socket} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move-\/constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & socket to move to $\ast$this \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_ad5dc9ffd6311247114538ec84f2c08a0}\label{classcpen333_1_1process_1_1posix_1_1socket_ad5dc9ffd6311247114538ec84f2c08a0}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!````~socket@{$\sim$socket}}
+\index{````~socket@{$\sim$socket}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{$\sim$socket()}{~socket()}}
+{\footnotesize\ttfamily cpen333\+::process\+::posix\+::socket\+::$\sim$socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor, closes socket if not already closed. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a37ac1c8f8ba6dec89066dc1721d0bb0c}\label{classcpen333_1_1process_1_1posix_1_1socket_a37ac1c8f8ba6dec89066dc1721d0bb0c}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!close@{close}}
+\index{close@{close}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::socket\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Closes the socket. 
+
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a0ac2e0452989cca9e6279602a8d73854}\label{classcpen333_1_1process_1_1posix_1_1socket_a0ac2e0452989cca9e6279602a8d73854}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!open@{open}}
+\index{open@{open}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::socket\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Opens socket if not already open, attempts to connect to server. 
+
+\begin{DoxyReturn}{Returns}
+true if connection established, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a0ebb354104529fd60a05b9de29919ce8}\label{classcpen333_1_1process_1_1posix_1_1socket_a0ebb354104529fd60a05b9de29919ce8}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!operator=@{operator=}}
+\index{operator=@{operator=}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classcpen333_1_1process_1_1posix_1_1socket}{socket}\& cpen333\+::process\+::posix\+::socket\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1process_1_1posix_1_1socket}{socket} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move-\/assignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & socket to move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to myself 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_aaadcd25ad297fc3ca9199f06a5ba7cc8}\label{classcpen333_1_1process_1_1posix_1_1socket_aaadcd25ad297fc3ca9199f06a5ba7cc8}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!read@{read}}
+\index{read@{read}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily ssize\+\_\+t cpen333\+::process\+::posix\+::socket\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Receives bytes of data from a socket. 
+
+This is a blocking operation\+: if there is no data, this method will wait until some becomes available or until the socket is closed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & pointer to data buffer to populate \\
+\hline
+{\em size} & size of buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read, 0 if closed, or -\/1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a80d3d77a066ebc082196bb2182021818}\label{classcpen333_1_1process_1_1posix_1_1socket_a80d3d77a066ebc082196bb2182021818}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!write@{write}}
+\index{write@{write}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::socket\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends string through the socket, including the terminating zero. 
+
+This is potentially a blocking operation\+: if the socket buffer is full, this method will wait until there is room to write the entire contents of the string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if send successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a60ba24c07c24cfb34ef77b0f137cfc32}\label{classcpen333_1_1process_1_1posix_1_1socket_a60ba24c07c24cfb34ef77b0f137cfc32}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!write@{write}}
+\index{write@{write}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::socket\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends bytes through the socket. 
+
+This is potentially a blocking operation\+: if the socket buffer is full, this method will wait until there is room to write the entire contents.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & pointer to data buffer to send \\
+\hline
+{\em size} & number of bytes to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if send successful, false otherwise 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_aba37c0ea463da9263b0712d3b3389066}\label{classcpen333_1_1process_1_1posix_1_1socket_aba37c0ea463da9263b0712d3b3389066}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!socket\+\_\+server@{socket\+\_\+server}}
+\index{socket\+\_\+server@{socket\+\_\+server}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{socket\+\_\+server}{socket\_server}}
+{\footnotesize\ttfamily friend class \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server}{socket\+\_\+server}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+P\+O\+S\+IX implementation of a socket server. 
+
+Windows implementation of a socket server. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/posix/\hyperlink{impl_2posix_2socket_8h}{socket.\+h}\end{DoxyCompactItemize}

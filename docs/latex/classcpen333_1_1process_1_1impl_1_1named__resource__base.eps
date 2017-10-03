@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 53.333333
+%%BoundingBox: 0 0 500 424.028269
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 9.375000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 1.179167 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 4 def
-/cols 5 def
+/rows 12 def
+/cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -175,14 +175,16 @@ boxfont setfont
 1 boundaspect scale
 (cpen333::process::impl::named_resource_base) cw
 (cpen333::process::named_resource) cw
+(cpen333::process::posix::mutex) cw
+(cpen333::process::posix::pipe) cw
+(cpen333::process::posix::pipe_server) cw
 (cpen333::process::posix::semaphore) cw
 (cpen333::process::posix::shared_memory) cw
 (cpen333::process::windows::mutex) cw
+(cpen333::process::windows::pipe) cw
+(cpen333::process::windows::pipe_server) cw
 (cpen333::process::windows::semaphore) cw
 (cpen333::process::windows::shared_memory) cw
-(cpen333::process::shared_object< T >) cw
-(cpen333::process::shared_object< pipe_info >) cw
-(cpen333::process::shared_object< shared_data >) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -194,46 +196,49 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (cpen333::process::impl::named_resource_base) 2.000000 2.000000 box
+ (cpen333::process::impl::named_resource_base) 0.000000 10.000000 box
 dashed
- (cpen333::process::named_resource) 2.000000 3.000000 box
+ (cpen333::process::named_resource) 0.000000 11.000000 box
 solid
- (cpen333::process::posix::semaphore) 0.000000 1.000000 box
- (cpen333::process::posix::shared_memory) 1.000000 1.000000 box
- (cpen333::process::windows::mutex) 2.000000 1.000000 box
- (cpen333::process::windows::semaphore) 3.000000 1.000000 box
- (cpen333::process::windows::shared_memory) 4.000000 1.000000 box
- (cpen333::process::shared_object< T >) 0.000000 0.000000 box
- (cpen333::process::shared_object< pipe_info >) 1.000000 0.000000 box
- (cpen333::process::shared_object< shared_data >) 2.000000 0.000000 box
+ (cpen333::process::posix::mutex) 1.000000 9.000000 box
+ (cpen333::process::posix::pipe) 1.000000 8.000000 box
+ (cpen333::process::posix::pipe_server) 1.000000 7.000000 box
+ (cpen333::process::posix::semaphore) 1.000000 6.000000 box
+ (cpen333::process::posix::shared_memory) 1.000000 5.000000 box
+1.000000 5.000000 mark
+ (cpen333::process::windows::mutex) 1.000000 4.000000 box
+ (cpen333::process::windows::pipe) 1.000000 3.000000 box
+ (cpen333::process::windows::pipe_server) 1.000000 2.000000 box
+ (cpen333::process::windows::semaphore) 1.000000 1.000000 box
+ (cpen333::process::windows::shared_memory) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-0 2.000000 2.000000 out
+0 0.000000 10.000000 out
 solid
-1 2.000000 3.000000 in
+1 0.000000 11.000000 in
 solid
-1 2.000000 1.250000 out
+1 0.000000 9.250000 out
 solid
-0.000000 4.000000 2.000000 conn
-solid
-0 0.000000 1.750000 in
-solid
-0 1.000000 1.750000 in
+0 0.000000 9.500000 hedge
 dotted
-1 1.000000 0.250000 out
+0 0.000000 8.500000 hedge
 dotted
-0.000000 2.000000 1.000000 conn
+0 0.000000 7.500000 hedge
 solid
-0 2.000000 1.750000 in
+0 0.000000 6.500000 hedge
 solid
-0 3.000000 1.750000 in
+0 0.000000 5.500000 hedge
 solid
-0 4.000000 1.750000 in
+0 0.000000 4.500000 hedge
 dotted
-0 0.000000 0.750000 in
+0 0.000000 3.500000 hedge
 dotted
-0 1.000000 0.750000 in
-dotted
-0 2.000000 0.750000 in
+0 0.000000 2.500000 hedge
+solid
+0 0.000000 1.500000 hedge
+solid
+0 0.000000 0.500000 hedge
+solid
+0.000000 10.000000 0.500000 vedge

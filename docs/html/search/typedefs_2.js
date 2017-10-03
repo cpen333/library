@@ -1,16 +1,5 @@
 var searchData=
 [
-  ['semaphore',['semaphore',['../process_2impl_2posix_2semaphore_8h.html#ac8abd3b1f6f6cbfd3c5c0028740c7bbc',1,'cpen333::process::semaphore()'],['../thread_2semaphore_8h.html#a7414c66f80d3de6bb3b8c3d541bc5c4b',1,'cpen333::thread::semaphore()']]],
-  ['shared_5fmemory',['shared_memory',['../impl_2posix_2shared__memory_8h.html#a6f5b2c87e05ba7839f7c01a828df8cc1',1,'cpen333::process']]],
-  ['shared_5fmutex',['shared_mutex',['../process_2shared__mutex_8h.html#a143668c5996f6d5a389cb972c9c4364a',1,'cpen333::process::shared_mutex()'],['../thread_2impl_2shared__mutex__fair_8h.html#acc211dc79b76e70c3dfffc7b14020d58',1,'std::shared_mutex()'],['../thread_2shared__mutex_8h.html#a5977e4da1af293edf0159b20b9c35b98',1,'cpen333::thread::shared_mutex()']]],
-  ['shared_5fmutex_5fexclusive',['shared_mutex_exclusive',['../process_2impl_2shared__mutex__exclusive_8h.html#ad0a30f6a95f8eaec3df39c9bc53f9283',1,'cpen333::process::shared_mutex_exclusive()'],['../thread_2impl_2shared__mutex__exclusive_8h.html#ae6b7eb38ede9b8deabaf6aab302368e5',1,'cpen333::thread::shared_mutex_exclusive()']]],
-  ['shared_5fmutex_5ffair',['shared_mutex_fair',['../process_2impl_2shared__mutex__fair_8h.html#af2d4a85122834c747c3bbf9e8cfb32de',1,'cpen333::process::shared_mutex_fair()'],['../thread_2impl_2shared__mutex__fair_8h.html#ab6bb6ebbb57834f76243f932246f62ca',1,'cpen333::thread::shared_mutex_fair()']]],
-  ['shared_5fmutex_5fshared',['shared_mutex_shared',['../process_2impl_2shared__mutex__shared_8h.html#a91f86a064c8eea6832a3090ae97667e9',1,'cpen333::process::shared_mutex_shared()'],['../thread_2impl_2shared__mutex__shared_8h.html#a560b7df7840f090255408bd1290125c7',1,'cpen333::thread::shared_mutex_shared()']]],
-  ['shared_5ftimed_5fmutex',['shared_timed_mutex',['../process_2shared__mutex_8h.html#a2252e76f3cb7a50ebda2c75b24037905',1,'cpen333::process::shared_timed_mutex()'],['../thread_2impl_2shared__mutex__fair_8h.html#a101addad866455217531e734603c5b8c',1,'std::shared_timed_mutex()'],['../thread_2shared__mutex_8h.html#adcfa3713889989c88b927079db7870c8',1,'cpen333::thread::shared_timed_mutex()']]],
-  ['shared_5ftimed_5fmutex_5fexclusive',['shared_timed_mutex_exclusive',['../process_2impl_2shared__mutex__exclusive_8h.html#a5683a7b525b63ed776cdc3a3bb847b51',1,'cpen333::process::shared_timed_mutex_exclusive()'],['../thread_2impl_2shared__mutex__exclusive_8h.html#a085094e3743a093f500b63bccb663489',1,'cpen333::thread::shared_timed_mutex_exclusive()']]],
-  ['shared_5ftimed_5fmutex_5ffair',['shared_timed_mutex_fair',['../process_2impl_2shared__mutex__fair_8h.html#abacd02002d03285d5eda3e25b2d8c510',1,'cpen333::process::shared_timed_mutex_fair()'],['../thread_2impl_2shared__mutex__fair_8h.html#a0538142cd8b676516eb92eaf1577d872',1,'cpen333::thread::shared_timed_mutex_fair()']]],
-  ['shared_5ftimed_5fmutex_5fshared',['shared_timed_mutex_shared',['../process_2impl_2shared__mutex__shared_8h.html#a4f82505d2343496671c839642c960510',1,'cpen333::process::shared_timed_mutex_shared()'],['../thread_2impl_2shared__mutex__shared_8h.html#ad9a245111cd81b2e7d08229a9ec244a3',1,'cpen333::thread::shared_timed_mutex_shared()']]],
-  ['socket_5fclient',['socket_client',['../impl_2posix_2socket_8h.html#a21a1f23dcdd4516428d91dcf29a3da2a',1,'cpen333::process']]],
-  ['socket_5fserver',['socket_server',['../impl_2posix_2socket_8h.html#a20117aaea46c0b0bb93ea8621c8e45dd',1,'cpen333::process']]],
-  ['subprocess',['subprocess',['../impl_2posix_2subprocess_8h.html#af2d04aa38f82b256f2244ebffc04d530',1,'cpen333::process']]]
+  ['pipe',['pipe',['../impl_2posix_2pipe_8h.html#aa96655a2ebf181b1dc7cbc8965a0919c',1,'cpen333::process']]],
+  ['pipe_5fserver',['pipe_server',['../impl_2posix_2pipe_8h.html#ac70a2a7554277a077dfa591629105e15',1,'cpen333::process']]]
 ];

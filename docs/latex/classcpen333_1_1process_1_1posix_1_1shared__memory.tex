@@ -24,15 +24,11 @@ using \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a4bec0d0093c
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a8a8f0918f8e132e0369c6e9ca9aa6bb6}{shared\+\_\+memory} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_ae0c5fbb1843afe863cece4b51c38f807}{name}, size\+\_\+t size, bool readonly=false)
+\hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a8a8f0918f8e132e0369c6e9ca9aa6bb6}{shared\+\_\+memory} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name}, size\+\_\+t size, bool readonly=false)
 \begin{DoxyCompactList}\small\item\em Constructs or connects to a block of shared memory. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1shared__memory_a618389d509320111d7aef051fbd32c07}\label{classcpen333_1_1process_1_1posix_1_1shared__memory_a618389d509320111d7aef051fbd32c07}} 
 \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a618389d509320111d7aef051fbd32c07}{$\sim$shared\+\_\+memory} ()
 \begin{DoxyCompactList}\small\item\em Destructor, unmaps this instance of the shared memory block (but does not unmap memory from other users) \end{DoxyCompactList}\item 
-bool \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a3b6d67a41cfaca3712d87958682d8bbe}{unlink} ()
-\begin{DoxyCompactList}\small\item\em Detaches the name from the named resource. \end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a0611e0aaf945ef86c803bb7907a99f98}{operator-\/$>$} ()
-\begin{DoxyCompactList}\small\item\em Pointer operator for accessing underlying data. \end{DoxyCompactList}\item 
 void $\ast$ \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_ae97ceec75dc83d43a995daac4769504d}{get} (size\+\_\+t offset=0)
 \begin{DoxyCompactList}\small\item\em Pointer to memory at a particular offset from the block. \end{DoxyCompactList}\item 
 uint8\+\_\+t \& \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a832b82cb6ab398e814418b516dba2dd9}{operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t offset)
@@ -41,12 +37,14 @@ uint8\+\_\+t \& \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a8
 \begin{DoxyCompactList}\small\item\em Retrieves a pointer to an object of specified type starting at a particular offset. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\T $\ast$ \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a705beedc2e0b3bde2e044fe742f641ea}{get} ()
 \begin{DoxyCompactList}\small\item\em Retrieves a pointer to the underlying memory, cast to a specified type. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a3b6d67a41cfaca3712d87958682d8bbe}{unlink} ()
+\begin{DoxyCompactList}\small\item\em Detaches the name from the named resource. \end{DoxyCompactList}\item 
 \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a4bec0d0093c8bcfa3283a5da8ef1fc78}{native\+\_\+handle\+\_\+type} \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_ac0dd258666565953b8c6bdbde7aa871f}{native\+\_\+handle} ()
 \begin{DoxyCompactList}\small\item\em Native handle to underlying shared memory block. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a68a9ecfafed3c939bc9c38edee71d584}{unlink} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_ae0c5fbb1843afe863cece4b51c38f807}{name})
+static bool \hyperlink{classcpen333_1_1process_1_1posix_1_1shared__memory_a68a9ecfafed3c939bc9c38edee71d584}{unlink} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
 \begin{DoxyCompactList}\small\item\em Unlinks the name without needing to create a resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -156,19 +154,6 @@ On P\+O\+S\+IX systems, this is a P\+O\+S\+IX shm id
 
 \begin{DoxyReturn}{Returns}
 native handle to shared memory block 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1shared__memory_a0611e0aaf945ef86c803bb7907a99f98}\label{classcpen333_1_1process_1_1posix_1_1shared__memory_a0611e0aaf945ef86c803bb7907a99f98}} 
-\index{cpen333\+::process\+::posix\+::shared\+\_\+memory@{cpen333\+::process\+::posix\+::shared\+\_\+memory}!operator-\/$>$@{operator-\/$>$}}
-\index{operator-\/$>$@{operator-\/$>$}!cpen333\+::process\+::posix\+::shared\+\_\+memory@{cpen333\+::process\+::posix\+::shared\+\_\+memory}}
-\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
-{\footnotesize\ttfamily void$\ast$ cpen333\+::process\+::posix\+::shared\+\_\+memory\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Pointer operator for accessing underlying data. 
-
-\begin{DoxyReturn}{Returns}
-pointer to underlying data 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1shared__memory_a832b82cb6ab398e814418b516dba2dd9}\label{classcpen333_1_1process_1_1posix_1_1shared__memory_a832b82cb6ab398e814418b516dba2dd9}} 
 \index{cpen333\+::process\+::posix\+::shared\+\_\+memory@{cpen333\+::process\+::posix\+::shared\+\_\+memory}!operator\mbox{[}\mbox{]}@{operator[]}}

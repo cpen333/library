@@ -64,58 +64,20 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">pipe.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Basic inter-process pipe implementation based on a FIFO.  
+<p>Inter-process pipe implementation.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="named__resource_8h_source.html">named_resource.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mutex_8h_source.html">mutex.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="process_2semaphore_8h_source.html">semaphore.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="shared__memory_8h_source.html">shared_memory.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="os_8h_source.html">../os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="impl_2posix_2pipe_8h_source.html">impl/posix/pipe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="basic__pipe_8h_source.html">impl/basic_pipe.h</a>&quot;</code><br />
 </div>
 <p><a href="pipe_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1pipe.html">cpen333::process::pipe</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inter-process pipe with one read-end and one write-end, emulated using a shared FIFO-style queue.  <a href="classcpen333_1_1process_1_1pipe.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a87a937b24dabc2fb64be6f1cdca4bee6"><td class="memItemLeft" align="right" valign="top"><a id="a87a937b24dabc2fb64be6f1cdca4bee6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a87a937b24dabc2fb64be6f1cdca4bee6">PIPE_NAME_SUFFIX</a>&#160;&#160;&#160;&quot;_pp&quot;</td></tr>
-<tr class="memdesc:a87a937b24dabc2fb64be6f1cdca4bee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suffix to add to the pipe's internal memory name for uniqueness. <br /></td></tr>
-<tr class="separator:a87a937b24dabc2fb64be6f1cdca4bee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb1d5adad5f79e8c817b69f078fdc0a4"><td class="memItemLeft" align="right" valign="top"><a id="abb1d5adad5f79e8c817b69f078fdc0a4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#abb1d5adad5f79e8c817b69f078fdc0a4">PIPE_WRITE_SUFFIX</a>&#160;&#160;&#160;&quot;_ppw&quot;</td></tr>
-<tr class="memdesc:abb1d5adad5f79e8c817b69f078fdc0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suffix to add to the pipe's writer's semaphore/mutex. <br /></td></tr>
-<tr class="separator:abb1d5adad5f79e8c817b69f078fdc0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2950b599e2b61eb8a7975ede87e0ca4"><td class="memItemLeft" align="right" valign="top"><a id="af2950b599e2b61eb8a7975ede87e0ca4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#af2950b599e2b61eb8a7975ede87e0ca4">PIPE_READ_SUFFIX</a>&#160;&#160;&#160;&quot;_ppr&quot;</td></tr>
-<tr class="memdesc:af2950b599e2b61eb8a7975ede87e0ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suffix to add to the pipe's reader's semaphore/mutex. <br /></td></tr>
-<tr class="separator:af2950b599e2b61eb8a7975ede87e0ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91e911cc2c8873dbd401fc939d75c871"><td class="memItemLeft" align="right" valign="top"><a id="a91e911cc2c8873dbd401fc939d75c871"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a91e911cc2c8873dbd401fc939d75c871">PIPE_INFO_SUFFIX</a>&#160;&#160;&#160;&quot;_ppi&quot;</td></tr>
-<tr class="memdesc:a91e911cc2c8873dbd401fc939d75c871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suffix to add to the pipe's information block. <br /></td></tr>
-<tr class="separator:a91e911cc2c8873dbd401fc939d75c871"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a641dadd9d2c1c772e0702aa91f97c740"><td class="memItemLeft" align="right" valign="top"><a id="a641dadd9d2c1c772e0702aa91f97c740"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a641dadd9d2c1c772e0702aa91f97c740">PIPE_OPEN_SUFFIX</a>&#160;&#160;&#160;&quot;_ppo&quot;</td></tr>
-<tr class="memdesc:a641dadd9d2c1c772e0702aa91f97c740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suffix to add to the pipe's "open" mutex for ensuring valid pipe connections. <br /></td></tr>
-<tr class="separator:a641dadd9d2c1c772e0702aa91f97c740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d34eb688443a62e1558a264385b561f"><td class="memItemLeft" align="right" valign="top"><a id="a5d34eb688443a62e1558a264385b561f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a5d34eb688443a62e1558a264385b561f">PIPE_INITIALIZED</a>&#160;&#160;&#160;0x18763023</td></tr>
-<tr class="memdesc:a5d34eb688443a62e1558a264385b561f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic number for ensuring pipe has been initialized. <br /></td></tr>
-<tr class="separator:a5d34eb688443a62e1558a264385b561f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Basic inter-process pipe implementation based on a FIFO. </p>
+<div class="textblock"><p>Inter-process pipe implementation. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

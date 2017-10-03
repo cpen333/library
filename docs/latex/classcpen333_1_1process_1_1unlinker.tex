@@ -12,8 +12,9 @@ A named-\/resource wrapper that provides a convenient R\+A\+I\+I-\/style unlinki
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef T \hyperlink{classcpen333_1_1process_1_1unlinker_aca3c99d7ac2fba23d2855c88486c3f51}{type}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1unlinker_a124c3197018db7eccfedab4c6ee04827}\label{classcpen333_1_1process_1_1unlinker_a124c3197018db7eccfedab4c6ee04827}} 
+using \hyperlink{classcpen333_1_1process_1_1unlinker_a124c3197018db7eccfedab4c6ee04827}{type} = T
+\begin{DoxyCompactList}\small\item\em \hyperlink{classcpen333_1_1process_1_1named__resource}{named\+\_\+resource} type \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,24 +36,14 @@ class cpen333\+::process\+::unlinker$<$ T $>$}
 
 A named-\/resource wrapper that provides a convenient R\+A\+I\+I-\/style unlinking of the resource name. 
 
-Used to ensure that a resource\textquotesingle{}s name is unlinked when the unlinker object drops out of scope. On Windows, this doesn\textquotesingle{}t really do anything, since unlinking of resource names is not a supported operation.
+Used to ensure that a resource\textquotesingle{}s name is unlinked when the unlinker object drops out of scope. This should prevent resource leaking in case of exceptions.
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em T} & named-\/resource type, should extend \hyperlink{classcpen333_1_1process_1_1named__resource}{cpen333\+::process\+::named\+\_\+resource}, must support {\ttfamily bool \hyperlink{classcpen333_1_1process_1_1unlinker_a00dd4ad138a95aa0173f81fd83c3210e}{unlink()}} and {\ttfamily static bool unlink(std\+::string\&)}\\
+{\em T} & named-\/resource type, must extend \hyperlink{classcpen333_1_1process_1_1named__resource}{cpen333\+::process\+::named\+\_\+resource} and support {\ttfamily bool \hyperlink{classcpen333_1_1process_1_1unlinker_a00dd4ad138a95aa0173f81fd83c3210e}{unlink()}} and {\ttfamily static bool unlink(std\+::string\&)} \\
 \hline
 \end{DoxyTemplParams}
-Used to ensure that a resource\textquotesingle{}s name is unlinked when the unlinker object drops out of scope. On P\+O\+S\+IX systems, this can help guarantee that the lifetime of a resource will not persist beyond the lifetime of the controlling process. This is an alias to either \hyperlink{classcpen333_1_1process_1_1posix_1_1unlinker}{cpen333\+::process\+::posix\+::unlinker} or cpen333\+::process\+::windows\+::unlinker depending on your platform. 
 
-\subsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1unlinker_aca3c99d7ac2fba23d2855c88486c3f51}\label{classcpen333_1_1process_1_1unlinker_aca3c99d7ac2fba23d2855c88486c3f51}} 
-\index{cpen333\+::process\+::unlinker@{cpen333\+::process\+::unlinker}!type@{type}}
-\index{type@{type}!cpen333\+::process\+::unlinker@{cpen333\+::process\+::unlinker}}
-\subsubsection{\texorpdfstring{type}{type}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-typedef T \hyperlink{classcpen333_1_1process_1_1unlinker}{cpen333\+::process\+::unlinker}$<$ T $>$\+::\hyperlink{classcpen333_1_1process_1_1unlinker_aca3c99d7ac2fba23d2855c88486c3f51}{type}}
-
-Alias to the named-\/resource type 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1unlinker_a44039679bd9939254fc53a5e876d8b8c}\label{classcpen333_1_1process_1_1unlinker_a44039679bd9939254fc53a5e876d8b8c}} 
@@ -97,4 +88,4 @@ always {\ttfamily false}, since unlinking is not supported on Windows
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/windows/\hyperlink{impl_2windows_2unlinker_8h}{unlinker.\+h}\end{DoxyCompactItemize}
+D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/\hyperlink{unlinker_8h}{unlinker.\+h}\end{DoxyCompactItemize}

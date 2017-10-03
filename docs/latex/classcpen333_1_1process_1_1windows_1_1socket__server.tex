@@ -22,12 +22,17 @@ Socket server.
 \begin{DoxyCompactList}\small\item\em Destructor, closes the server socket. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1windows_1_1socket__server_a0a2021766c8d5728d044a96d24bbc684}{start} ()
 \begin{DoxyCompactList}\small\item\em Starts listening for connections. \end{DoxyCompactList}\item 
-bool \hyperlink{classcpen333_1_1process_1_1windows_1_1socket__server_aee5db9af683de8a0b26272a25661aa40}{accept} (\hyperlink{classcpen333_1_1process_1_1windows_1_1socket__client}{socket\+\_\+client} \&client)
+bool \hyperlink{classcpen333_1_1process_1_1windows_1_1socket__server_a9faaa8159f63116a3fa5e7a68ca8095a}{accept} (\hyperlink{classcpen333_1_1process_1_1windows_1_1socket}{socket} \&client)
 \begin{DoxyCompactList}\small\item\em Accepts a client connection. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1windows_1_1socket__server_a5eddf38d7b08e27f2299a750f16eae66}{close} ()
 \begin{DoxyCompactList}\small\item\em Close the server socket. \end{DoxyCompactList}\item 
 int \hyperlink{classcpen333_1_1process_1_1windows_1_1socket__server_a4b5f9231c046f947a77a6458202c2712}{port} ()
 \begin{DoxyCompactList}\small\item\em Retries the server port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classcpen333_1_1process_1_1windows_1_1socket__server_ad4f6bbc14fc0f8716feea2a120873b50}{address\+\_\+lookup} ()
+\begin{DoxyCompactList}\small\item\em Looks up an address path based on the local host name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -56,11 +61,11 @@ If the port is 0, then finds an open port. The port number can be quieried with 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1socket__server_aee5db9af683de8a0b26272a25661aa40}\label{classcpen333_1_1process_1_1windows_1_1socket__server_aee5db9af683de8a0b26272a25661aa40}} 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1socket__server_a9faaa8159f63116a3fa5e7a68ca8095a}\label{classcpen333_1_1process_1_1windows_1_1socket__server_a9faaa8159f63116a3fa5e7a68ca8095a}} 
 \index{cpen333\+::process\+::windows\+::socket\+\_\+server@{cpen333\+::process\+::windows\+::socket\+\_\+server}!accept@{accept}}
 \index{accept@{accept}!cpen333\+::process\+::windows\+::socket\+\_\+server@{cpen333\+::process\+::windows\+::socket\+\_\+server}}
 \subsubsection{\texorpdfstring{accept()}{accept()}}
-{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::socket\+\_\+server\+::accept (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1process_1_1windows_1_1socket__client}{socket\+\_\+client} \&}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::socket\+\_\+server\+::accept (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1process_1_1windows_1_1socket}{socket} \&}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -75,6 +80,19 @@ This method will block until a client connects to the server. Upon connection, t
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1socket__server_ad4f6bbc14fc0f8716feea2a120873b50}\label{classcpen333_1_1process_1_1windows_1_1socket__server_ad4f6bbc14fc0f8716feea2a120873b50}} 
+\index{cpen333\+::process\+::windows\+::socket\+\_\+server@{cpen333\+::process\+::windows\+::socket\+\_\+server}!address\+\_\+lookup@{address\+\_\+lookup}}
+\index{address\+\_\+lookup@{address\+\_\+lookup}!cpen333\+::process\+::windows\+::socket\+\_\+server@{cpen333\+::process\+::windows\+::socket\+\_\+server}}
+\subsubsection{\texorpdfstring{address\+\_\+lookup()}{address\_lookup()}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::string$>$ cpen333\+::process\+::windows\+::socket\+\_\+server\+::address\+\_\+lookup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Looks up an address path based on the local host name. 
+
+\begin{DoxyReturn}{Returns}
+vector of addresses if found 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1socket__server_a5eddf38d7b08e27f2299a750f16eae66}\label{classcpen333_1_1process_1_1windows_1_1socket__server_a5eddf38d7b08e27f2299a750f16eae66}} 
 \index{cpen333\+::process\+::windows\+::socket\+\_\+server@{cpen333\+::process\+::windows\+::socket\+\_\+server}!close@{close}}

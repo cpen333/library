@@ -73,8 +73,6 @@ $(function() {
 </li>
 <li>send()
 : <a class="el" href="classcpen333_1_1process_1_1message__queue.html#a1f50c208f75ad2937d11d7eca8fdb6f0">cpen333::process::message_queue&lt; MessageType &gt;</a>
-, <a class="el" href="classcpen333_1_1process_1_1posix_1_1socket__client.html#a17fee08b05864613e4ba677faa142d3a">cpen333::process::posix::socket_client</a>
-, <a class="el" href="classcpen333_1_1process_1_1windows_1_1socket__client.html#aa365c3943cf245092dba651034288dfd">cpen333::process::windows::socket_client</a>
 </li>
 <li>set_background_color()
 : <a class="el" href="classcpen333_1_1console.html#a2328c0819515e1d3508cd1018f62c674">cpen333::console</a>
@@ -90,6 +88,9 @@ $(function() {
 </li>
 <li>set_foreground_color()
 : <a class="el" href="classcpen333_1_1console.html#a0710a0e8e75562c189bcf81837f01fa4">cpen333::console</a>
+</li>
+<li>set_name()
+: <a class="el" href="classcpen333_1_1process_1_1impl_1_1named__resource__base.html#a46b07755d096da7295f6ba34355fad24">cpen333::process::impl::named_resource_base</a>
 </li>
 <li>shared_lock()
 : <a class="el" href="classstd_1_1shared__lock.html#ad98172785abb3cf717e758dfe033798e">std::shared_lock&lt; SharedMutexType &gt;</a>
@@ -121,17 +122,19 @@ $(function() {
 , <a class="el" href="classcpen333_1_1process_1_1message__queue.html#aab604a8c153f7f918762abc7f2380396">cpen333::process::message_queue&lt; MessageType &gt;</a>
 , <a class="el" href="classcpen333_1_1thread_1_1fifo.html#a9cb822d2b108ebf092146dbe2cd90f1f">cpen333::thread::fifo&lt; ValueType &gt;</a>
 </li>
-<li>socket_client()
-: <a class="el" href="classcpen333_1_1process_1_1posix_1_1socket__client.html#a846e54b0c2175d0657edb23687a2d882">cpen333::process::posix::socket_client</a>
-, <a class="el" href="classcpen333_1_1process_1_1windows_1_1socket__client.html#a276d574007dc6854a97e8ac90b672a24">cpen333::process::windows::socket_client</a>
+<li>socket()
+: <a class="el" href="classcpen333_1_1process_1_1posix_1_1socket.html#a37b973439d588e1a3b3f43381e9fef55">cpen333::process::posix::socket</a>
+, <a class="el" href="classcpen333_1_1process_1_1windows_1_1socket.html#a5f52500d16f2c98de9ba0de9ec94224a">cpen333::process::windows::socket</a>
 </li>
 <li>socket_server()
 : <a class="el" href="classcpen333_1_1process_1_1posix_1_1socket__server.html#a2880c0745a27f52a545619f48f7e06bd">cpen333::process::posix::socket_server</a>
-, <a class="el" href="classcpen333_1_1process_1_1windows_1_1socket__server.html#a719c448f8f7f7b48dd54ac426e18fdfe">cpen333::process::windows::socket_server</a>
+, <a class="el" href="classcpen333_1_1process_1_1windows_1_1socket__server.html#ada3d9f2a11e196dc91b3199b37fe50e2">cpen333::process::windows::socket_server</a>
 </li>
 <li>start()
-: <a class="el" href="classcpen333_1_1process_1_1posix_1_1socket__server.html#a0d02be64318ad8d7686633f1bdddc677">cpen333::process::posix::socket_server</a>
+: <a class="el" href="classcpen333_1_1process_1_1posix_1_1pipe__server.html#ae155615a438deba2ee73f0f92cd3f992">cpen333::process::posix::pipe_server</a>
+, <a class="el" href="classcpen333_1_1process_1_1posix_1_1socket__server.html#a0d02be64318ad8d7686633f1bdddc677">cpen333::process::posix::socket_server</a>
 , <a class="el" href="classcpen333_1_1process_1_1posix_1_1subprocess.html#a8738add1094b2dda57b9ffb8ec6828c1">cpen333::process::posix::subprocess</a>
+, <a class="el" href="classcpen333_1_1process_1_1windows_1_1pipe__server.html#a154fb75caf8fc068ab2d6a0a70e96bc9">cpen333::process::windows::pipe_server</a>
 , <a class="el" href="classcpen333_1_1process_1_1windows_1_1socket__server.html#a0a2021766c8d5728d044a96d24bbc684">cpen333::process::windows::socket_server</a>
 , <a class="el" href="classcpen333_1_1process_1_1windows_1_1subprocess.html#ad6fddf2c148cefff9753dafaeb35d1a3">cpen333::process::windows::subprocess</a>
 , <a class="el" href="classcpen333_1_1thread_1_1thread__object.html#ae4484909a3f4418c0c0db318d615bde1">cpen333::thread::thread_object</a>
@@ -141,8 +144,8 @@ $(function() {
 : <a class="el" href="classcpen333_1_1thread_1_1timer.html#afa3811e04ef58d3040935c49aca19948">cpen333::thread::timer&lt; Duration &gt;</a>
 </li>
 <li>subprocess()
-: <a class="el" href="classcpen333_1_1process_1_1posix_1_1subprocess.html#a427822d8d77afa1014a0d10a5f50aa14">cpen333::process::posix::subprocess</a>
-, <a class="el" href="classcpen333_1_1process_1_1windows_1_1subprocess.html#adf8e8c5cbeb63bebd888896a07b4fa58">cpen333::process::windows::subprocess</a>
+: <a class="el" href="classcpen333_1_1process_1_1posix_1_1subprocess.html#a5c0d64e12281789fa5ce25f03fa17bd9">cpen333::process::posix::subprocess</a>
+, <a class="el" href="classcpen333_1_1process_1_1windows_1_1subprocess.html#ab927ab6d2b499cb7079bc2dedbd670ff">cpen333::process::windows::subprocess</a>
 </li>
 </ul>
 </div><!-- contents -->

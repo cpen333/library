@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['fifo_5fconsumer_5fsuffix',['FIFO_CONSUMER_SUFFIX',['../process_2fifo_8h.html#ad76ddd19d428abed42dcc3f5cea1c582',1,'fifo.h']]],
-  ['fifo_5finitialized',['FIFO_INITIALIZED',['../process_2fifo_8h.html#ad3d505e03bcc42e9a611169181308ed0',1,'fifo.h']]],
-  ['fifo_5fproducer_5fsuffix',['FIFO_PRODUCER_SUFFIX',['../process_2fifo_8h.html#a770db790cee1bea61c430ae43ec1ffea',1,'fifo.h']]],
-  ['fifo_5fsuffix',['FIFO_SUFFIX',['../process_2fifo_8h.html#af7c04e87b7f6725c161d4d2f4f71143d',1,'fifo.h']]]
+  ['default_5fpipe_5fname',['DEFAULT_PIPE_NAME',['../impl_2posix_2pipe_8h.html#a2daaae4628fa074b831c6941901ee1e9',1,'DEFAULT_PIPE_NAME():&#160;pipe.h'],['../impl_2windows_2pipe_8h.html#a2daaae4628fa074b831c6941901ee1e9',1,'DEFAULT_PIPE_NAME():&#160;pipe.h']]],
+  ['delete_5fmethod',['DELETE_METHOD',['../util_8h.html#a3229fb1aca43b37f588b871e1a9e3438',1,'util.h']]]
 ];

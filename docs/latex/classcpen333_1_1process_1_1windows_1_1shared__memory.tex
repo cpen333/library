@@ -24,12 +24,10 @@ typedef H\+A\+N\+D\+LE \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a3a2044ba961f9fc394e166273a3efa20}{shared\+\_\+memory} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_ae0c5fbb1843afe863cece4b51c38f807}{name}, size\+\_\+t size, bool readonly=false)
+\hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a3a2044ba961f9fc394e166273a3efa20}{shared\+\_\+memory} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name}, size\+\_\+t size, bool readonly=false)
 \begin{DoxyCompactList}\small\item\em Constructs or connects to a block of shared memory. \end{DoxyCompactList}\item 
 \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a6355690147ae22f25d4bceed8ad63011}{$\sim$shared\+\_\+memory} ()
 \begin{DoxyCompactList}\small\item\em Destructor, unmaps this instance of the shared memory block (but does not unmap memory from other users) \end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a2afcb6ba09ba1039c2e03efb471d3b28}{operator-\/$>$} ()
-\begin{DoxyCompactList}\small\item\em Pointer operator for accessing underlying data. \end{DoxyCompactList}\item 
 void $\ast$ \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a3bbd718728dc2fa2fbe4058b8a207594}{get} (size\+\_\+t offset=0)
 \begin{DoxyCompactList}\small\item\em Pointer to memory at a particular offset from the block. \end{DoxyCompactList}\item 
 uint8\+\_\+t \& \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a931719bdcc1558973d6fcb7a79f52f22}{operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t offset)
@@ -45,7 +43,7 @@ bool \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_aa6efdc9a3e
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a99c4766a9995a97595bba1550256f1c9}{unlink} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_ae0c5fbb1843afe863cece4b51c38f807}{name})
+static bool \hyperlink{classcpen333_1_1process_1_1windows_1_1shared__memory_a99c4766a9995a97595bba1550256f1c9}{unlink} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
 \begin{DoxyCompactList}\small\item\em Unlinks the name without needing to create a resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -160,19 +158,6 @@ On Windows systems, this is a Windows H\+A\+N\+D\+LE to the memory-\/mapped file
 
 \begin{DoxyReturn}{Returns}
 native handle to shared memory block 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1shared__memory_a2afcb6ba09ba1039c2e03efb471d3b28}\label{classcpen333_1_1process_1_1windows_1_1shared__memory_a2afcb6ba09ba1039c2e03efb471d3b28}} 
-\index{cpen333\+::process\+::windows\+::shared\+\_\+memory@{cpen333\+::process\+::windows\+::shared\+\_\+memory}!operator-\/$>$@{operator-\/$>$}}
-\index{operator-\/$>$@{operator-\/$>$}!cpen333\+::process\+::windows\+::shared\+\_\+memory@{cpen333\+::process\+::windows\+::shared\+\_\+memory}}
-\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
-{\footnotesize\ttfamily void$\ast$ cpen333\+::process\+::windows\+::shared\+\_\+memory\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Pointer operator for accessing underlying data. 
-
-\begin{DoxyReturn}{Returns}
-pointer to underlying data 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1shared__memory_a931719bdcc1558973d6fcb7a79f52f22}\label{classcpen333_1_1process_1_1windows_1_1shared__memory_a931719bdcc1558973d6fcb7a79f52f22}} 
 \index{cpen333\+::process\+::windows\+::shared\+\_\+memory@{cpen333\+::process\+::windows\+::shared\+\_\+memory}!operator\mbox{[}\mbox{]}@{operator[]}}

@@ -81,6 +81,7 @@ $(function() {
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;sys/socket.h&gt;</code><br />
 <code>#include &lt;netdb.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="util_8h_source.html">../../../util.h</a>&quot;</code><br />
 </div>
@@ -88,8 +89,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket__client.html">cpen333::process::posix::socket_client</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket client.  <a href="classcpen333_1_1process_1_1posix_1_1socket__client.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket.html">cpen333::process::posix::socket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket client.  <a href="classcpen333_1_1process_1_1posix_1_1socket.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket__server.html">cpen333::process::posix::socket_server</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket server.  <a href="classcpen333_1_1process_1_1posix_1_1socket__server.html#details">More...</a><br /></td></tr>
@@ -112,9 +113,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a21a1f23dcdd4516428d91dcf29a3da2a"><td class="memItemLeft" align="right" valign="top">typedef posix::socket_client&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="impl_2posix_2socket_8h.html#a21a1f23dcdd4516428d91dcf29a3da2a">cpen333::process::socket_client</a></td></tr>
-<tr class="memdesc:a21a1f23dcdd4516428d91dcf29a3da2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX implementation of a socket client.  <a href="impl_2posix_2socket_8h.html#a21a1f23dcdd4516428d91dcf29a3da2a">More...</a><br /></td></tr>
-<tr class="separator:a21a1f23dcdd4516428d91dcf29a3da2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fd9869471014ebdfbd39808db8a016"><td class="memItemLeft" align="right" valign="top">typedef posix::socket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="impl_2posix_2socket_8h.html#a93fd9869471014ebdfbd39808db8a016">cpen333::process::socket</a></td></tr>
+<tr class="memdesc:a93fd9869471014ebdfbd39808db8a016"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX implementation of a socket client.  <a href="impl_2posix_2socket_8h.html#a93fd9869471014ebdfbd39808db8a016">More...</a><br /></td></tr>
+<tr class="separator:a93fd9869471014ebdfbd39808db8a016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20117aaea46c0b0bb93ea8621c8e45dd"><td class="memItemLeft" align="right" valign="top">typedef posix::socket_server&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="impl_2posix_2socket_8h.html#a20117aaea46c0b0bb93ea8621c8e45dd">cpen333::process::socket_server</a></td></tr>
 <tr class="memdesc:a20117aaea46c0b0bb93ea8621c8e45dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX implementation of a socket server.  <a href="impl_2posix_2socket_8h.html#a20117aaea46c0b0bb93ea8621c8e45dd">More...</a><br /></td></tr>
 <tr class="separator:a20117aaea46c0b0bb93ea8621c8e45dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,14 +123,14 @@ Typedefs</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>POSIX implementation of a socket. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="file_a21a1f23dcdd4516428d91dcf29a3da2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a21a1f23dcdd4516428d91dcf29a3da2a">&#9670;&nbsp;</a></span>socket_client</h2>
+<a id="file_a93fd9869471014ebdfbd39808db8a016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a93fd9869471014ebdfbd39808db8a016">&#9670;&nbsp;</a></span>socket</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef windows::socket_client <a class="el" href="classcpen333_1_1process_1_1socket__client.html">cpen333::process::socket_client</a></td>
+          <td class="memname">typedef windows::socket <a class="el" href="classcpen333_1_1process_1_1socket.html">cpen333::process::socket</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

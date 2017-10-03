@@ -33,5 +33,5 @@ var searchData=
   ['try_5fsend_5ffor',['try_send_for',['../classcpen333_1_1process_1_1message__queue.html#a5242a6193a42e68e36634846f09c5e3b',1,'cpen333::process::message_queue']]],
   ['try_5fsend_5funtil',['try_send_until',['../classcpen333_1_1process_1_1message__queue.html#ab13d8f1c89ca9022e5446b3fc5432072',1,'cpen333::process::message_queue']]],
   ['try_5fwait',['try_wait',['../classcpen333_1_1process_1_1posix_1_1semaphore.html#ac0e2bd6495113c0699c5e2511f345edb',1,'cpen333::process::posix::semaphore::try_wait()'],['../classcpen333_1_1process_1_1windows_1_1semaphore.html#a06cffd6c2ed120af0477252fb48b0346',1,'cpen333::process::windows::semaphore::try_wait()'],['../classcpen333_1_1thread_1_1basic__semaphore.html#a72eb19243d4c55013f7fca9e5aa059f5',1,'cpen333::thread::basic_semaphore::try_wait()']]],
-  ['type',['type',['../classcpen333_1_1process_1_1posix_1_1unlinker.html#ae2d0ba15300eebd3aad3b645af8154eb',1,'cpen333::process::posix::unlinker::type()'],['../classcpen333_1_1process_1_1unlinker.html#aca3c99d7ac2fba23d2855c88486c3f51',1,'cpen333::process::unlinker::type()']]]
+  ['type',['type',['../classcpen333_1_1process_1_1unlinker.html#a124c3197018db7eccfedab4c6ee04827',1,'cpen333::process::unlinker']]]
 ];

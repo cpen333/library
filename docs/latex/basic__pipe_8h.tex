@@ -1,0 +1,42 @@
+\hypertarget{basic__pipe_8h}{}\section{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/basic\+\_\+pipe.h File Reference}
+\label{basic__pipe_8h}\index{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/basic\+\_\+pipe.\+h@{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/basic\+\_\+pipe.\+h}}
+
+
+Basic inter-\/process pipe implementation based on a F\+I\+FO.  
+
+
+{\ttfamily \#include \char`\"{}../named\+\_\+resource.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../semaphore.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../shared\+\_\+memory.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcpen333_1_1process_1_1basic__pipe}{cpen333\+::process\+::basic\+\_\+pipe}
+\begin{DoxyCompactList}\small\item\em Inter-\/process pipe emulated using a shared F\+I\+F\+O-\/style queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{basic__pipe_8h_abe8e95103dc3de237267c2ebaa9f8d02}\label{basic__pipe_8h_abe8e95103dc3de237267c2ebaa9f8d02}} 
+\#define \hyperlink{basic__pipe_8h_abe8e95103dc3de237267c2ebaa9f8d02}{B\+A\+S\+I\+C\+\_\+\+P\+I\+P\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+pp\char`\"{}
+\begin{DoxyCompactList}\small\item\em Suffix to add to the pipe\textquotesingle{}s internal memory name for uniqueness. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{basic__pipe_8h_ada73248c3ad1443574d2517ca166e4b9}\label{basic__pipe_8h_ada73248c3ad1443574d2517ca166e4b9}} 
+\#define \hyperlink{basic__pipe_8h_ada73248c3ad1443574d2517ca166e4b9}{B\+A\+S\+I\+C\+\_\+\+P\+I\+P\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+ppw\char`\"{}
+\begin{DoxyCompactList}\small\item\em Suffix to add to the pipe\textquotesingle{}s writer\textquotesingle{}s semaphore/mutex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{basic__pipe_8h_a0e941c8a90b19a1a7b0f07e847050033}\label{basic__pipe_8h_a0e941c8a90b19a1a7b0f07e847050033}} 
+\#define \hyperlink{basic__pipe_8h_a0e941c8a90b19a1a7b0f07e847050033}{B\+A\+S\+I\+C\+\_\+\+P\+I\+P\+E\+\_\+\+R\+E\+A\+D\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+ppr\char`\"{}
+\begin{DoxyCompactList}\small\item\em Suffix to add to the pipe\textquotesingle{}s reader\textquotesingle{}s semaphore/mutex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{basic__pipe_8h_a1591abd1d451841a3fd117458514868a}\label{basic__pipe_8h_a1591abd1d451841a3fd117458514868a}} 
+\#define \hyperlink{basic__pipe_8h_a1591abd1d451841a3fd117458514868a}{B\+A\+S\+I\+C\+\_\+\+P\+I\+P\+E\+\_\+\+I\+N\+F\+O\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+ppi\char`\"{}
+\begin{DoxyCompactList}\small\item\em Suffix to add to the pipe\textquotesingle{}s information block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{basic__pipe_8h_abcca7f5ccb1d5a3d6b04036d255f7fa5}\label{basic__pipe_8h_abcca7f5ccb1d5a3d6b04036d255f7fa5}} 
+\#define \hyperlink{basic__pipe_8h_abcca7f5ccb1d5a3d6b04036d255f7fa5}{B\+A\+S\+I\+C\+\_\+\+P\+I\+P\+E\+\_\+\+O\+P\+E\+N\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+ppo\char`\"{}
+\begin{DoxyCompactList}\small\item\em Suffix to add to the pipe\textquotesingle{}s \char`\"{}open\char`\"{} mutex for ensuring valid pipe connections. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{basic__pipe_8h_aeb638f3e3f346c89d9a6fb7b2329bc0f}\label{basic__pipe_8h_aeb638f3e3f346c89d9a6fb7b2329bc0f}} 
+\#define \hyperlink{basic__pipe_8h_aeb638f3e3f346c89d9a6fb7b2329bc0f}{B\+A\+S\+I\+C\+\_\+\+P\+I\+P\+E\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}~0x18763023
+\begin{DoxyCompactList}\small\item\em Magic number for ensuring pipe has been initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic inter-\/process pipe implementation based on a F\+I\+FO. 
+

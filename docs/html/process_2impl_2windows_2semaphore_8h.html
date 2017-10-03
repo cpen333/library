@@ -74,7 +74,8 @@ $(function() {
 
 <p>Windows implementation of an inter-process named semaphore.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;climits&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;windows.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="util_8h_source.html">../../../util.h</a>&quot;</code><br />
@@ -90,6 +91,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft" align="right" valign="top"><a id="a9f918755b601cf4bffca775992e6fb90"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_2impl_2windows_2semaphore_8h.html#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a9f918755b601cf4bffca775992e6fb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent windows from defining min(), max() macros. <br /></td></tr>
+<tr class="separator:a9f918755b601cf4bffca775992e6fb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0da9797c84aacec4e7ed6888f084a2e"><td class="memItemLeft" align="right" valign="top"><a id="ae0da9797c84aacec4e7ed6888f084a2e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_2impl_2windows_2semaphore_8h.html#ae0da9797c84aacec4e7ed6888f084a2e">MAX_SEMAPHORE_SIZE</a>&#160;&#160;&#160;LONG_MAX</td></tr>
 <tr class="memdesc:ae0da9797c84aacec4e7ed6888f084a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum possible size of a semaphore. <br /></td></tr>

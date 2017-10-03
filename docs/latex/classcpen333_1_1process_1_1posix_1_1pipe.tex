@@ -1,0 +1,252 @@
+\hypertarget{classcpen333_1_1process_1_1posix_1_1pipe}{}\section{cpen333\+:\+:process\+:\+:posix\+:\+:pipe Class Reference}
+\label{classcpen333_1_1process_1_1posix_1_1pipe}\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+
+
+Interprocess pipe.  
+
+
+
+
+{\ttfamily \#include $<$pipe.\+h$>$}
+
+Inheritance diagram for cpen333\+:\+:process\+:\+:posix\+:\+:pipe\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcpen333_1_1process_1_1posix_1_1pipe}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_ae449d2fa72e6a83ed3f2ecfca1444e7f}\label{classcpen333_1_1process_1_1posix_1_1pipe_ae449d2fa72e6a83ed3f2ecfca1444e7f}} 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_ae449d2fa72e6a83ed3f2ecfca1444e7f}{pipe} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, for use with a server. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_ac39ea29cbd5084681acde6b02b27bf91}{pipe} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
+\begin{DoxyCompactList}\small\item\em Main constructor, creates a named pipe. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_a0ee8e36b323420d783fdbcf253225677}{pipe} (\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe}{pipe} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move-\/constructor. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe}{pipe} \& \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_ab0715b21ad951bff7da956bfe71c51d7}{operator=} (\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe}{pipe} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move-\/assignment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_a07ac40ab8d1a1157e0817ead25db9d3f}\label{classcpen333_1_1process_1_1posix_1_1pipe_a07ac40ab8d1a1157e0817ead25db9d3f}} 
+\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_a07ac40ab8d1a1157e0817ead25db9d3f}{$\sim$pipe} ()
+\begin{DoxyCompactList}\small\item\em Destructor, closes pipe if not already closed. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_a256fbc6e54cf558ee06c5f3b65d5dc23}{open} ()
+\begin{DoxyCompactList}\small\item\em Opens pipe if not already open, attempts to connect to pipe server. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_a6aeb644645944b435c32928db1349aa7}{write} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Writes a string to the pipe, including the terminating zero. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_abb450a7e724dd5ad8fc364b2cc75c311}{write} (const void $\ast$buff, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Writes bytes to the pipe. \end{DoxyCompactList}\item 
+ssize\+\_\+t \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_af327b2c4db0cfd21cd5688ccff0f5eb0}{read} (void $\ast$buff, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reads bytes of data from a pipe. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_af36dacdb81426f3dc76904bdcf1afc8f}{close} ()
+\begin{DoxyCompactList}\small\item\em Closes the pipe. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_ac1dd8e1a7fd46480b709e96190afe697}{unlink} ()
+\begin{DoxyCompactList}\small\item\em Detaches the name from the named resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_aef89e04134417c569972bd565741622b}{unlink} (const std\+::string \&\hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_a53986a0a1dd26a3602b842c45613b79d}{name})
+\begin{DoxyCompactList}\small\item\em Unlinks the name without needing to create a resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_ab111e84ef31179e72c2bd2e58e2042b0}{pipe\+\_\+server}
+\begin{DoxyCompactList}\small\item\em P\+O\+S\+IX implementation of a pipe server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interprocess pipe. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_ac39ea29cbd5084681acde6b02b27bf91}\label{classcpen333_1_1process_1_1posix_1_1pipe_ac39ea29cbd5084681acde6b02b27bf91}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!pipe@{pipe}}
+\index{pipe@{pipe}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{pipe()}{pipe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cpen333\+::process\+::posix\+::pipe\+::pipe (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Main constructor, creates a named pipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & identifier for connecting to an existing inter-\/process pipe \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_a0ee8e36b323420d783fdbcf253225677}\label{classcpen333_1_1process_1_1posix_1_1pipe_a0ee8e36b323420d783fdbcf253225677}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!pipe@{pipe}}
+\index{pipe@{pipe}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{pipe()}{pipe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cpen333\+::process\+::posix\+::pipe\+::pipe (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe}{pipe} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move-\/constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & pipe to move \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_af36dacdb81426f3dc76904bdcf1afc8f}\label{classcpen333_1_1process_1_1posix_1_1pipe_af36dacdb81426f3dc76904bdcf1afc8f}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!close@{close}}
+\index{close@{close}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::pipe\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Closes the pipe. 
+
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_a256fbc6e54cf558ee06c5f3b65d5dc23}\label{classcpen333_1_1process_1_1posix_1_1pipe_a256fbc6e54cf558ee06c5f3b65d5dc23}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!open@{open}}
+\index{open@{open}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::pipe\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Opens pipe if not already open, attempts to connect to pipe server. 
+
+\begin{DoxyReturn}{Returns}
+true if connection established, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_ab0715b21ad951bff7da956bfe71c51d7}\label{classcpen333_1_1process_1_1posix_1_1pipe_ab0715b21ad951bff7da956bfe71c51d7}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!operator=@{operator=}}
+\index{operator=@{operator=}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe}{pipe}\& cpen333\+::process\+::posix\+::pipe\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1process_1_1posix_1_1pipe}{pipe} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move-\/assignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & pipe to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to myself 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_af327b2c4db0cfd21cd5688ccff0f5eb0}\label{classcpen333_1_1process_1_1posix_1_1pipe_af327b2c4db0cfd21cd5688ccff0f5eb0}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!read@{read}}
+\index{read@{read}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily ssize\+\_\+t cpen333\+::process\+::posix\+::pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads bytes of data from a pipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & pointer to data buffer to populate \\
+\hline
+{\em size} & size of buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read, 0 if pipe is closed, or -\/1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_ac1dd8e1a7fd46480b709e96190afe697}\label{classcpen333_1_1process_1_1posix_1_1pipe_ac1dd8e1a7fd46480b709e96190afe697}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!unlink@{unlink}}
+\index{unlink@{unlink}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{unlink()}{unlink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::pipe\+::unlink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Detaches the name from the named resource. 
+
+On P\+O\+S\+IX systems, named resources will persist beyond the lifetime of any process that uses them as long as the name has not been unlinked (or until the system is rebooted). Calling {\ttfamily unlink} will detach the name, allowing the resource to be freed once all current users have exited.
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if unlink is successful, {\ttfamily false} if unlinking is not supported or if an error has occurred. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classcpen333_1_1process_1_1impl_1_1named__resource__base_ae4033f82dfd068b917a9bca57d3a0c45}{cpen333\+::process\+::impl\+::named\+\_\+resource\+\_\+base}.
+
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_aef89e04134417c569972bd565741622b}\label{classcpen333_1_1process_1_1posix_1_1pipe_aef89e04134417c569972bd565741622b}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!unlink@{unlink}}
+\index{unlink@{unlink}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{unlink()}{unlink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool cpen333\+::process\+::posix\+::pipe\+::unlink (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Unlinks the name without needing to create a resource. 
+
+Implementers should also provide a static method for unlinking. The purpose is mainly for clean-\/up of existing resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & desired resource name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if unlink successful, {\ttfamily false} if not successful or not supported 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_a6aeb644645944b435c32928db1349aa7}\label{classcpen333_1_1process_1_1posix_1_1pipe_a6aeb644645944b435c32928db1349aa7}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!write@{write}}
+\index{write@{write}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::pipe\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a string to the pipe, including the terminating zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if send successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_abb450a7e724dd5ad8fc364b2cc75c311}\label{classcpen333_1_1process_1_1posix_1_1pipe_abb450a7e724dd5ad8fc364b2cc75c311}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!write@{write}}
+\index{write@{write}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::pipe\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes bytes to the pipe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & pointer to data buffer to send \\
+\hline
+{\em size} & number of bytes to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if send successful, false otherwise 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_ab111e84ef31179e72c2bd2e58e2042b0}\label{classcpen333_1_1process_1_1posix_1_1pipe_ab111e84ef31179e72c2bd2e58e2042b0}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!pipe\+\_\+server@{pipe\+\_\+server}}
+\index{pipe\+\_\+server@{pipe\+\_\+server}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{pipe\+\_\+server}{pipe\_server}}
+{\footnotesize\ttfamily friend class \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe__server}{pipe\+\_\+server}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+P\+O\+S\+IX implementation of a pipe server. 
+
+Windows implementation of a pipe server. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/posix/\hyperlink{impl_2posix_2pipe_8h}{pipe.\+h}\end{DoxyCompactItemize}

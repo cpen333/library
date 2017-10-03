@@ -1,0 +1,87 @@
+\hypertarget{impl_2posix_2pipe_8h}{}\section{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/posix/pipe.h File Reference}
+\label{impl_2posix_2pipe_8h}\index{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/posix/pipe.\+h@{D\+:/school/teaching/\+C\+P\+E\+N333/workspace/library/include/cpen333/process/impl/posix/pipe.\+h}}
+
+
+P\+O\+S\+IX implementation of a pipe.  
+
+
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../named\+\_\+resource\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../../util.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe}{cpen333\+::process\+::posix\+::pipe}
+\begin{DoxyCompactList}\small\item\em Interprocess pipe. \end{DoxyCompactList}\item 
+class \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe__server}{cpen333\+::process\+::posix\+::pipe\+\_\+server}
+\begin{DoxyCompactList}\small\item\em Pipe server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_a3ac3765cf1d3a278c757025215219a7c}\label{impl_2posix_2pipe_8h_a3ac3765cf1d3a278c757025215219a7c}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_a3ac3765cf1d3a278c757025215219a7c}{P\+I\+P\+E\+\_\+\+N\+A\+M\+E\+\_\+\+P\+R\+E\+F\+IX}~\char`\"{}/tmp\char`\"{}
+\begin{DoxyCompactList}\small\item\em create pipe in temporary directory \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_ac60aba3ec75c499cd7dfd2e3407578b5}\label{impl_2posix_2pipe_8h_ac60aba3ec75c499cd7dfd2e3407578b5}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_ac60aba3ec75c499cd7dfd2e3407578b5}{P\+I\+P\+E\+\_\+\+S\+C\+\_\+\+N\+A\+M\+E\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+scpipe\char`\"{}
+\begin{DoxyCompactList}\small\item\em Name suffix for pipe from server to client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_a293f36d76f45ba1588e5aeb7c1f79b53}\label{impl_2posix_2pipe_8h_a293f36d76f45ba1588e5aeb7c1f79b53}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_a293f36d76f45ba1588e5aeb7c1f79b53}{P\+I\+P\+E\+\_\+\+C\+S\+\_\+\+N\+A\+M\+E\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+cspipe\char`\"{}
+\begin{DoxyCompactList}\small\item\em Name suffix for pipe client to server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_a09450cd97247d79ef34b1cfdc2930dab}\label{impl_2posix_2pipe_8h_a09450cd97247d79ef34b1cfdc2930dab}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_a09450cd97247d79ef34b1cfdc2930dab}{P\+I\+P\+E\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+U\+T\+E\+X\+\_\+\+N\+A\+M\+E\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+cm\char`\"{}
+\begin{DoxyCompactList}\small\item\em Name suffix for client mutex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_a8a9440808d22c39bfb749bea20c3c8b6}\label{impl_2posix_2pipe_8h_a8a9440808d22c39bfb749bea20c3c8b6}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_a8a9440808d22c39bfb749bea20c3c8b6}{P\+I\+P\+E\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+N\+A\+M\+E\+\_\+\+S\+U\+F\+F\+IX}~\char`\"{}\+\_\+sm\char`\"{}
+\begin{DoxyCompactList}\small\item\em Name suffix for server mutex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_a2daaae4628fa074b831c6941901ee1e9}\label{impl_2posix_2pipe_8h_a2daaae4628fa074b831c6941901ee1e9}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_a2daaae4628fa074b831c6941901ee1e9}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+I\+P\+E\+\_\+\+N\+A\+ME}~\char`\"{}uninitialized\+\_\+pipe\char`\"{}
+\begin{DoxyCompactList}\small\item\em Default name for uninitialized pipes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_a4a685f42601a69b788ca2bc6f520793c}\label{impl_2posix_2pipe_8h_a4a685f42601a69b788ca2bc6f520793c}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_a4a685f42601a69b788ca2bc6f520793c}{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+I\+PE}~-\/1
+\begin{DoxyCompactList}\small\item\em Invalid pipe handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_a1362a695a8fe97fdb4342e23144cc944}\label{impl_2posix_2pipe_8h_a1362a695a8fe97fdb4342e23144cc944}} 
+\#define \hyperlink{impl_2posix_2pipe_8h_a1362a695a8fe97fdb4342e23144cc944}{P\+I\+P\+E\+\_\+\+T\+I\+M\+E\+O\+UT}~10000
+\begin{DoxyCompactList}\small\item\em Default timeout for trying connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef posix\+::pipe \hyperlink{impl_2posix_2pipe_8h_aa96655a2ebf181b1dc7cbc8965a0919c}{cpen333\+::process\+::pipe}
+\begin{DoxyCompactList}\small\item\em P\+O\+S\+IX implementation of a pipe client. \end{DoxyCompactList}\item 
+typedef posix\+::pipe\+\_\+server \hyperlink{impl_2posix_2pipe_8h_ac70a2a7554277a077dfa591629105e15}{cpen333\+::process\+::pipe\+\_\+server}
+\begin{DoxyCompactList}\small\item\em P\+O\+S\+IX implementation of a pipe server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+O\+S\+IX implementation of a pipe. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{impl_2posix_2pipe_8h_file_aa96655a2ebf181b1dc7cbc8965a0919c}\label{impl_2posix_2pipe_8h_file_aa96655a2ebf181b1dc7cbc8965a0919c}} 
+\index{impl/posix/pipe.\+h@{impl/posix/pipe.\+h}!pipe@{pipe}}
+\index{pipe@{pipe}!impl/posix/pipe.\+h@{impl/posix/pipe.\+h}}
+\subsubsection{\texorpdfstring{pipe}{pipe}}
+{\footnotesize\ttfamily typedef windows\+::pipe \hyperlink{classcpen333_1_1process_1_1pipe}{cpen333\+::process\+::pipe}}
+
+
+
+P\+O\+S\+IX implementation of a pipe client. 
+
+Windows implementation of a pipe client. \mbox{\Hypertarget{impl_2posix_2pipe_8h_file_ac70a2a7554277a077dfa591629105e15}\label{impl_2posix_2pipe_8h_file_ac70a2a7554277a077dfa591629105e15}} 
+\index{impl/posix/pipe.\+h@{impl/posix/pipe.\+h}!pipe\+\_\+server@{pipe\+\_\+server}}
+\index{pipe\+\_\+server@{pipe\+\_\+server}!impl/posix/pipe.\+h@{impl/posix/pipe.\+h}}
+\subsubsection{\texorpdfstring{pipe\+\_\+server}{pipe\_server}}
+{\footnotesize\ttfamily typedef windows\+::pipe\+\_\+server \hyperlink{classcpen333_1_1process_1_1pipe__server}{cpen333\+::process\+::pipe\+\_\+server}}
+
+
+
+P\+O\+S\+IX implementation of a pipe server. 
+
+Windows implementation of a pipe server. 
