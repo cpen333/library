@@ -36,8 +36,10 @@ bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe_a633e73bc0c412b17a9c5
 \begin{DoxyCompactList}\small\item\em Writes a string to the pipe, including the terminating zero. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe_a072e8bded1b6f0a45683875ed3be1aa2}{write} (const void $\ast$buff, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Writes bytes to the pipe. \end{DoxyCompactList}\item 
-ssize\+\_\+t \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe_a35e7d782aae4879ae3625f61b2d78783}{read} (void $\ast$buff, size\+\_\+t size)
+size\+\_\+t \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe_a3cb456794637be1845cdeca693dc27d0}{read} (void $\ast$buff, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Reads bytes of data from a pipe. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe_a4aafcae5f14f971f112ec00601f55601}{read\+\_\+all} (void $\ast$buff, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reads all data up to the specified size from the pipe. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe_a6d01b3a84c6184ba02e9825003386d20}{close} ()
 \begin{DoxyCompactList}\small\item\em Closes the pipe. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe_abe0bc707040aa7e82ed41c26cc4c93c1}{unlink} ()
@@ -135,11 +137,11 @@ Move-\/assignment.
 \begin{DoxyReturn}{Returns}
 reference to this 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe_a35e7d782aae4879ae3625f61b2d78783}\label{classcpen333_1_1process_1_1windows_1_1pipe_a35e7d782aae4879ae3625f61b2d78783}} 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe_a3cb456794637be1845cdeca693dc27d0}\label{classcpen333_1_1process_1_1windows_1_1pipe_a3cb456794637be1845cdeca693dc27d0}} 
 \index{cpen333\+::process\+::windows\+::pipe@{cpen333\+::process\+::windows\+::pipe}!read@{read}}
 \index{read@{read}!cpen333\+::process\+::windows\+::pipe@{cpen333\+::process\+::windows\+::pipe}}
 \subsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily ssize\+\_\+t cpen333\+::process\+::windows\+::pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily size\+\_\+t cpen333\+::process\+::windows\+::pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -155,7 +157,29 @@ This is a potentially blocking operation\+: the pipe will wait here until data i
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-number of bytes read, 0 if pipe is closed, or -\/1 if error 
+number of bytes read, 0 if pipe is closed or error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe_a4aafcae5f14f971f112ec00601f55601}\label{classcpen333_1_1process_1_1windows_1_1pipe_a4aafcae5f14f971f112ec00601f55601}} 
+\index{cpen333\+::process\+::windows\+::pipe@{cpen333\+::process\+::windows\+::pipe}!read\+\_\+all@{read\+\_\+all}}
+\index{read\+\_\+all@{read\+\_\+all}!cpen333\+::process\+::windows\+::pipe@{cpen333\+::process\+::windows\+::pipe}}
+\subsubsection{\texorpdfstring{read\+\_\+all()}{read\_all()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::pipe\+::read\+\_\+all (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads all data up to the specified size from the pipe. 
+
+Read bytes from the head of the pipe, blocking if necessary until all bytes are read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & memory address to fill with pipe contents \\
+\hline
+{\em size} & number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if read is successful, false if read is interrupted 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe_abe0bc707040aa7e82ed41c26cc4c93c1}\label{classcpen333_1_1process_1_1windows_1_1pipe_abe0bc707040aa7e82ed41c26cc4c93c1}} 
 \index{cpen333\+::process\+::windows\+::pipe@{cpen333\+::process\+::windows\+::pipe}!unlink@{unlink}}
@@ -210,7 +234,7 @@ This is potentially a blocking operation\+: if the pipe is full, this method wil
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & string to send \\
+{\em str} & string to send, length+1 must fit into a signed integer \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

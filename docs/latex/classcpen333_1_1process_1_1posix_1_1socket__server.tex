@@ -12,13 +12,11 @@ Socket server.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a2880c0745a27f52a545619f48f7e06bd}{socket\+\_\+server} ()
-\begin{DoxyCompactList}\small\item\em Default constructor, creates a server that listens on the default port. \end{DoxyCompactList}\item 
-\hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a105715f9f86df458e790db89135a7aac}{socket\+\_\+server} (int \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a5962af3110c19660b29f154f867e87e2}{port})
+\hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a245c4208b3be5daf334e4123ba0836c7}{socket\+\_\+server} (int \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a5962af3110c19660b29f154f867e87e2}{port}=\hyperlink{impl_2windows_2socket_8h_a5164d95d122c5161aceda0d59b962e2e}{C\+P\+E\+N333\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT})
 \begin{DoxyCompactList}\small\item\em Constructor, creates a server that listens on the provided port. \end{DoxyCompactList}\item 
 \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a2d07def5c83de193cc2f19c51be31c17}{$\sim$socket\+\_\+server} ()
 \begin{DoxyCompactList}\small\item\em Destructor, closes the server socket. \end{DoxyCompactList}\item 
-bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a0d02be64318ad8d7686633f1bdddc677}{start} ()
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a3da498856b5fb812e2e983561cf88944}{open} ()
 \begin{DoxyCompactList}\small\item\em Starts listening for connections. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_ae68768699a5ddc4550263dd758f4e708}{accept} (\hyperlink{classcpen333_1_1process_1_1posix_1_1socket}{socket} \&client)
 \begin{DoxyCompactList}\small\item\em Accepts a client connection. \end{DoxyCompactList}\item 
@@ -36,24 +34,14 @@ static std\+::vector$<$ std\+::string $>$ \hyperlink{classcpen333_1_1process_1_1
 \subsection{Detailed Description}
 Socket server. 
 
-P\+O\+S\+I\+X/\+B\+SD implementation of a socket server that listens for connections. The server is N\+OT started automatically. To start listening for connections, call the \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a0d02be64318ad8d7686633f1bdddc677}{start()} function. 
+P\+O\+S\+I\+X/\+B\+SD implementation of a socket server that listens for connections. The server is N\+OT started automatically. To start listening for connections, call the \hyperlink{classcpen333_1_1process_1_1posix_1_1socket__server_a3da498856b5fb812e2e983561cf88944}{open()} function. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket__server_a2880c0745a27f52a545619f48f7e06bd}\label{classcpen333_1_1process_1_1posix_1_1socket__server_a2880c0745a27f52a545619f48f7e06bd}} 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket__server_a245c4208b3be5daf334e4123ba0836c7}\label{classcpen333_1_1process_1_1posix_1_1socket__server_a245c4208b3be5daf334e4123ba0836c7}} 
 \index{cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}!socket\+\_\+server@{socket\+\_\+server}}
 \index{socket\+\_\+server@{socket\+\_\+server}!cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}}
-\subsubsection{\texorpdfstring{socket\+\_\+server()}{socket\_server()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily cpen333\+::process\+::posix\+::socket\+\_\+server\+::socket\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Default constructor, creates a server that listens on the default port. 
-
-\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket__server_a105715f9f86df458e790db89135a7aac}\label{classcpen333_1_1process_1_1posix_1_1socket__server_a105715f9f86df458e790db89135a7aac}} 
-\index{cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}!socket\+\_\+server@{socket\+\_\+server}}
-\index{socket\+\_\+server@{socket\+\_\+server}!cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}}
-\subsubsection{\texorpdfstring{socket\+\_\+server()}{socket\_server()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily cpen333\+::process\+::posix\+::socket\+\_\+server\+::socket\+\_\+server (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\subsubsection{\texorpdfstring{socket\+\_\+server()}{socket\_server()}}
+{\footnotesize\ttfamily cpen333\+::process\+::posix\+::socket\+\_\+server\+::socket\+\_\+server (\begin{DoxyParamCaption}\item[{int}]{port = {\ttfamily \hyperlink{impl_2windows_2socket_8h_a5164d95d122c5161aceda0d59b962e2e}{C\+P\+E\+N333\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -125,6 +113,19 @@ Close the server socket.
 \begin{DoxyReturn}{Returns}
 true if successful, false otherwise 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket__server_a3da498856b5fb812e2e983561cf88944}\label{classcpen333_1_1process_1_1posix_1_1socket__server_a3da498856b5fb812e2e983561cf88944}} 
+\index{cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}!open@{open}}
+\index{open@{open}!cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::socket\+\_\+server\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts listening for connections. 
+
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket__server_a5962af3110c19660b29f154f867e87e2}\label{classcpen333_1_1process_1_1posix_1_1socket__server_a5962af3110c19660b29f154f867e87e2}} 
 \index{cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}!port@{port}}
 \index{port@{port}!cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}}
@@ -137,19 +138,6 @@ Retries the server port.
 
 \begin{DoxyReturn}{Returns}
 port number that server is listening on for connections 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket__server_a0d02be64318ad8d7686633f1bdddc677}\label{classcpen333_1_1process_1_1posix_1_1socket__server_a0d02be64318ad8d7686633f1bdddc677}} 
-\index{cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}!start@{start}}
-\index{start@{start}!cpen333\+::process\+::posix\+::socket\+\_\+server@{cpen333\+::process\+::posix\+::socket\+\_\+server}}
-\subsubsection{\texorpdfstring{start()}{start()}}
-{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::socket\+\_\+server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Starts listening for connections. 
-
-\begin{DoxyReturn}{Returns}
-true if successful, false otherwise. 
 \end{DoxyReturn}
 
 

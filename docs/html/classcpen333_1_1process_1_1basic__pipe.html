@@ -108,9 +108,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a31a394d2126fdcf8cfaace1733f941ff"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a31a394d2126fdcf8cfaace1733f941ff">write</a> (const T *data)</td></tr>
 <tr class="memdesc:a31a394d2126fdcf8cfaace1733f941ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an object to the pipe.  <a href="#a31a394d2126fdcf8cfaace1733f941ff">More...</a><br /></td></tr>
 <tr class="separator:a31a394d2126fdcf8cfaace1733f941ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4176320551b61bec3c52d77c6a9a75d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a4176320551b61bec3c52d77c6a9a75d2">read</a> (void *data, size_t size)</td></tr>
-<tr class="memdesc:a4176320551b61bec3c52d77c6a9a75d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the pipe.  <a href="#a4176320551b61bec3c52d77c6a9a75d2">More...</a><br /></td></tr>
-<tr class="separator:a4176320551b61bec3c52d77c6a9a75d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b4577f57f59f930b784ccc972805da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a72b4577f57f59f930b784ccc972805da">read_all</a> (void *data, size_t size)</td></tr>
+<tr class="memdesc:a72b4577f57f59f930b784ccc972805da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads all data up to the specified size from the pipe.  <a href="#a72b4577f57f59f930b784ccc972805da">More...</a><br /></td></tr>
+<tr class="separator:a72b4577f57f59f930b784ccc972805da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cc99d4363243a02c7c0ee091f67270"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a85cc99d4363243a02c7c0ee091f67270">read</a> (void *buff, size_t size)</td></tr>
+<tr class="memdesc:a85cc99d4363243a02c7c0ee091f67270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the pipe.  <a href="#a85cc99d4363243a02c7c0ee091f67270">More...</a><br /></td></tr>
+<tr class="separator:a85cc99d4363243a02c7c0ee091f67270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e5b27ee80ba854cbacbfe82b1675e8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a61e5b27ee80ba854cbacbfe82b1675e8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a61e5b27ee80ba854cbacbfe82b1675e8">read</a> (T *data)</td></tr>
 <tr class="memdesc:a61e5b27ee80ba854cbacbfe82b1675e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an object from the pipe.  <a href="#a61e5b27ee80ba854cbacbfe82b1675e8">More...</a><br /></td></tr>
@@ -118,6 +121,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a409e54ba4fd21f9769105804eb118fae"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a409e54ba4fd21f9769105804eb118fae">available</a> ()</td></tr>
 <tr class="memdesc:a409e54ba4fd21f9769105804eb118fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the number of bytes currently remaining in the pipe.  <a href="#a409e54ba4fd21f9769105804eb118fae">More...</a><br /></td></tr>
 <tr class="separator:a409e54ba4fd21f9769105804eb118fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3931c0bae22d8f27fae99d7accbade88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a3931c0bae22d8f27fae99d7accbade88">open</a> ()</td></tr>
+<tr class="memdesc:a3931c0bae22d8f27fae99d7accbade88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not pipe is opened.  <a href="#a3931c0bae22d8f27fae99d7accbade88">More...</a><br /></td></tr>
+<tr class="separator:a3931c0bae22d8f27fae99d7accbade88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0d0787a431449f58d730ae9d2c4f1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a9c0d0787a431449f58d730ae9d2c4f1d">close</a> ()</td></tr>
+<tr class="memdesc:a9c0d0787a431449f58d730ae9d2c4f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent further writes to the pipe.  <a href="#a9c0d0787a431449f58d730ae9d2c4f1d">More...</a><br /></td></tr>
+<tr class="separator:a9c0d0787a431449f58d730ae9d2c4f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a344a8291b20be973ade784922bdf37eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1basic__pipe.html#a344a8291b20be973ade784922bdf37eb">unlink</a> ()</td></tr>
 <tr class="memdesc:a344a8291b20be973ade784922bdf37eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches the name from the named resource.  <a href="#a344a8291b20be973ade784922bdf37eb">More...</a><br /></td></tr>
 <tr class="separator:a344a8291b20be973ade784922bdf37eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,8 +225,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4176320551b61bec3c52d77c6a9a75d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4176320551b61bec3c52d77c6a9a75d2">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
+<a id="a9c0d0787a431449f58d730ae9d2c4f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0d0787a431449f58d730ae9d2c4f1d">&#9670;&nbsp;</a></span>close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,10 +235,67 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool cpen333::process::basic_pipe::read </td>
+          <td class="memname">bool cpen333::process::basic_pipe::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prevent further writes to the pipe. </p>
+<p>The buffer can still be read until there are no bytes left.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if closed successfully, false if already closed </dd></dl>
+
+</div>
+</div>
+<a id="a3931c0bae22d8f27fae99d7accbade88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3931c0bae22d8f27fae99d7accbade88">&#9670;&nbsp;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cpen333::process::basic_pipe::open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether or not pipe is opened. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if not closed </dd></dl>
+
+</div>
+</div>
+<a id="a85cc99d4363243a02c7c0ee091f67270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85cc99d4363243a02c7c0ee091f67270">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cpen333::process::basic_pipe::read </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramname"><em>buff</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -251,15 +317,15 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads data from the pipe. </p>
-<p>Reads the specified number of bytes from the head of the pipe. This method will block until the desired number of bytes are read.</p>
+<p>Read bytes from the head of the pipe. This method will block if the pipe is empty. If not empty, it will read up to whatever data is available, returning the number of bytes read.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>memory address to fill with pipe contents </td></tr>
-    <tr><td class="paramname">size</td><td>number of bytes </td></tr>
+    <tr><td class="paramname">buff</td><td>memory address to fill with pipe contents </td></tr>
+    <tr><td class="paramname">size</td><td>size of the data buffer </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes read, 0 if pipe is closed </dd></dl>
 
 </div>
 </div>
@@ -304,6 +370,53 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a72b4577f57f59f930b784ccc972805da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b4577f57f59f930b784ccc972805da">&#9670;&nbsp;</a></span>read_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cpen333::process::basic_pipe::read_all </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads all data up to the specified size from the pipe. </p>
+<p>Read bytes from the head of the pipe, blocking if necessary until all bytes are read.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>memory address to fill with pipe contents </td></tr>
+    <tr><td class="paramname">size</td><td>number of bytes to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if read is successful, false if read is interrupted </dd></dl>
 
 </div>
 </div>

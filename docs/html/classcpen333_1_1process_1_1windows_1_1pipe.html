@@ -116,9 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a072e8bded1b6f0a45683875ed3be1aa2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1windows_1_1pipe.html#a072e8bded1b6f0a45683875ed3be1aa2">write</a> (const void *buff, size_t size)</td></tr>
 <tr class="memdesc:a072e8bded1b6f0a45683875ed3be1aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes bytes to the pipe.  <a href="#a072e8bded1b6f0a45683875ed3be1aa2">More...</a><br /></td></tr>
 <tr class="separator:a072e8bded1b6f0a45683875ed3be1aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35e7d782aae4879ae3625f61b2d78783"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1windows_1_1pipe.html#a35e7d782aae4879ae3625f61b2d78783">read</a> (void *buff, size_t size)</td></tr>
-<tr class="memdesc:a35e7d782aae4879ae3625f61b2d78783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads bytes of data from a pipe.  <a href="#a35e7d782aae4879ae3625f61b2d78783">More...</a><br /></td></tr>
-<tr class="separator:a35e7d782aae4879ae3625f61b2d78783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb456794637be1845cdeca693dc27d0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1windows_1_1pipe.html#a3cb456794637be1845cdeca693dc27d0">read</a> (void *buff, size_t size)</td></tr>
+<tr class="memdesc:a3cb456794637be1845cdeca693dc27d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads bytes of data from a pipe.  <a href="#a3cb456794637be1845cdeca693dc27d0">More...</a><br /></td></tr>
+<tr class="separator:a3cb456794637be1845cdeca693dc27d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aafcae5f14f971f112ec00601f55601"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1windows_1_1pipe.html#a4aafcae5f14f971f112ec00601f55601">read_all</a> (void *buff, size_t size)</td></tr>
+<tr class="memdesc:a4aafcae5f14f971f112ec00601f55601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads all data up to the specified size from the pipe.  <a href="#a4aafcae5f14f971f112ec00601f55601">More...</a><br /></td></tr>
+<tr class="separator:a4aafcae5f14f971f112ec00601f55601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d01b3a84c6184ba02e9825003386d20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1windows_1_1pipe.html#a6d01b3a84c6184ba02e9825003386d20">close</a> ()</td></tr>
 <tr class="memdesc:a6d01b3a84c6184ba02e9825003386d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the pipe.  <a href="#a6d01b3a84c6184ba02e9825003386d20">More...</a><br /></td></tr>
 <tr class="separator:a6d01b3a84c6184ba02e9825003386d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,8 +304,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a35e7d782aae4879ae3625f61b2d78783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35e7d782aae4879ae3625f61b2d78783">&#9670;&nbsp;</a></span>read()</h2>
+<a id="a3cb456794637be1845cdeca693dc27d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb456794637be1845cdeca693dc27d0">&#9670;&nbsp;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +314,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ssize_t cpen333::process::windows::pipe::read </td>
+          <td class="memname">size_t cpen333::process::windows::pipe::read </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>buff</em>, </td>
@@ -344,7 +347,54 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>number of bytes read, 0 if pipe is closed, or -1 if error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes read, 0 if pipe is closed or error </dd></dl>
+
+</div>
+</div>
+<a id="a4aafcae5f14f971f112ec00601f55601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aafcae5f14f971f112ec00601f55601">&#9670;&nbsp;</a></span>read_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cpen333::process::windows::pipe::read_all </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads all data up to the specified size from the pipe. </p>
+<p>Read bytes from the head of the pipe, blocking if necessary until all bytes are read.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buff</td><td>memory address to fill with pipe contents </td></tr>
+    <tr><td class="paramname">size</td><td>number of bytes to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if read is successful, false if read is interrupted </dd></dl>
 
 </div>
 </div>
@@ -443,7 +493,7 @@ Friends</h2></td></tr>
 <p>This is potentially a blocking operation: if the pipe is full, this method will wait until the remaining bytes can be written.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>string to send </td></tr>
+    <tr><td class="paramname">str</td><td>string to send, length+1 must fit into a signed integer </td></tr>
   </table>
   </dd>
 </dl>

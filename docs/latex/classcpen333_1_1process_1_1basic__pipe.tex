@@ -29,12 +29,18 @@ bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a969c7f9d0069b13e8fd3c50d
 \begin{DoxyCompactList}\small\item\em Writes an object to the pipe. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a31a394d2126fdcf8cfaace1733f941ff}{write} (const T $\ast$data)
 \begin{DoxyCompactList}\small\item\em Writes an object to the pipe. \end{DoxyCompactList}\item 
-bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a4176320551b61bec3c52d77c6a9a75d2}{read} (void $\ast$data, size\+\_\+t size)
+bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a72b4577f57f59f930b784ccc972805da}{read\+\_\+all} (void $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reads all data up to the specified size from the pipe. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classcpen333_1_1process_1_1basic__pipe_a85cc99d4363243a02c7c0ee091f67270}{read} (void $\ast$buff, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Reads data from the pipe. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a61e5b27ee80ba854cbacbfe82b1675e8}{read} (T $\ast$data)
 \begin{DoxyCompactList}\small\item\em Reads an object from the pipe. \end{DoxyCompactList}\item 
 size\+\_\+t \hyperlink{classcpen333_1_1process_1_1basic__pipe_a409e54ba4fd21f9769105804eb118fae}{available} ()
 \begin{DoxyCompactList}\small\item\em Determines the number of bytes currently remaining in the pipe. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a3931c0bae22d8f27fae99d7accbade88}{open} ()
+\begin{DoxyCompactList}\small\item\em Returns whether or not pipe is opened. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a9c0d0787a431449f58d730ae9d2c4f1d}{close} ()
+\begin{DoxyCompactList}\small\item\em Prevent further writes to the pipe. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1basic__pipe_a344a8291b20be973ade784922bdf37eb}{unlink} ()
 \begin{DoxyCompactList}\small\item\em Detaches the name from the named resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
@@ -85,27 +91,55 @@ This method should rarely be used, as the number of bytes is subject to change r
 \begin{DoxyReturn}{Returns}
 number of bytes currently remaining in the pipe 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a4176320551b61bec3c52d77c6a9a75d2}\label{classcpen333_1_1process_1_1basic__pipe_a4176320551b61bec3c52d77c6a9a75d2}} 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a9c0d0787a431449f58d730ae9d2c4f1d}\label{classcpen333_1_1process_1_1basic__pipe_a9c0d0787a431449f58d730ae9d2c4f1d}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!close@{close}}
+\index{close@{close}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::basic\+\_\+pipe\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prevent further writes to the pipe. 
+
+The buffer can still be read until there are no bytes left.
+
+\begin{DoxyReturn}{Returns}
+true if closed successfully, false if already closed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a3931c0bae22d8f27fae99d7accbade88}\label{classcpen333_1_1process_1_1basic__pipe_a3931c0bae22d8f27fae99d7accbade88}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!open@{open}}
+\index{open@{open}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::basic\+\_\+pipe\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether or not pipe is opened. 
+
+\begin{DoxyReturn}{Returns}
+true if not closed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a85cc99d4363243a02c7c0ee091f67270}\label{classcpen333_1_1process_1_1basic__pipe_a85cc99d4363243a02c7c0ee091f67270}} 
 \index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!read@{read}}
 \index{read@{read}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
 \subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily bool cpen333\+::process\+::basic\+\_\+pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily size\+\_\+t cpen333\+::process\+::basic\+\_\+pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Reads data from the pipe. 
 
-Reads the specified number of bytes from the head of the pipe. This method will block until the desired number of bytes are read.
+Read bytes from the head of the pipe. This method will block if the pipe is empty. If not empty, it will read up to whatever data is available, returning the number of bytes read.
 
 
 \begin{DoxyParams}{Parameters}
-{\em data} & memory address to fill with pipe contents \\
+{\em buff} & memory address to fill with pipe contents \\
 \hline
-{\em size} & number of bytes \\
+{\em size} & size of the data buffer \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true if successful, false otherwise 
+number of bytes read, 0 if pipe is closed 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a61e5b27ee80ba854cbacbfe82b1675e8}\label{classcpen333_1_1process_1_1basic__pipe_a61e5b27ee80ba854cbacbfe82b1675e8}} 
 \index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!read@{read}}
@@ -132,6 +166,28 @@ Convenience method for reading an object from the pipe, auto-\/detecting the app
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a72b4577f57f59f930b784ccc972805da}\label{classcpen333_1_1process_1_1basic__pipe_a72b4577f57f59f930b784ccc972805da}} 
+\index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!read\+\_\+all@{read\+\_\+all}}
+\index{read\+\_\+all@{read\+\_\+all}!cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}}
+\subsubsection{\texorpdfstring{read\+\_\+all()}{read\_all()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::basic\+\_\+pipe\+::read\+\_\+all (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads all data up to the specified size from the pipe. 
+
+Read bytes from the head of the pipe, blocking if necessary until all bytes are read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & memory address to fill with pipe contents \\
+\hline
+{\em size} & number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if read is successful, false if read is interrupted 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1basic__pipe_a344a8291b20be973ade784922bdf37eb}\label{classcpen333_1_1process_1_1basic__pipe_a344a8291b20be973ade784922bdf37eb}} 
 \index{cpen333\+::process\+::basic\+\_\+pipe@{cpen333\+::process\+::basic\+\_\+pipe}!unlink@{unlink}}

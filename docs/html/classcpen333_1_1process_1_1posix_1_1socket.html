@@ -104,9 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a60ba24c07c24cfb34ef77b0f137cfc32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket.html#a60ba24c07c24cfb34ef77b0f137cfc32">write</a> (const void *buff, size_t size)</td></tr>
 <tr class="memdesc:a60ba24c07c24cfb34ef77b0f137cfc32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends bytes through the socket.  <a href="#a60ba24c07c24cfb34ef77b0f137cfc32">More...</a><br /></td></tr>
 <tr class="separator:a60ba24c07c24cfb34ef77b0f137cfc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaadcd25ad297fc3ca9199f06a5ba7cc8"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket.html#aaadcd25ad297fc3ca9199f06a5ba7cc8">read</a> (void *buff, size_t size)</td></tr>
-<tr class="memdesc:aaadcd25ad297fc3ca9199f06a5ba7cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives bytes of data from a socket.  <a href="#aaadcd25ad297fc3ca9199f06a5ba7cc8">More...</a><br /></td></tr>
-<tr class="separator:aaadcd25ad297fc3ca9199f06a5ba7cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d3e49cdc4e6f548d9d2850d5697a8e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket.html#ae6d3e49cdc4e6f548d9d2850d5697a8e">read</a> (void *buff, size_t size)</td></tr>
+<tr class="memdesc:ae6d3e49cdc4e6f548d9d2850d5697a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives bytes of data from a socket.  <a href="#ae6d3e49cdc4e6f548d9d2850d5697a8e">More...</a><br /></td></tr>
+<tr class="separator:ae6d3e49cdc4e6f548d9d2850d5697a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e6ea97ebce81ea208f58309cc7f944"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket.html#a07e6ea97ebce81ea208f58309cc7f944">read_all</a> (void *buff, size_t size)</td></tr>
+<tr class="memdesc:a07e6ea97ebce81ea208f58309cc7f944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads all data up to the specified size from the pipe.  <a href="#a07e6ea97ebce81ea208f58309cc7f944">More...</a><br /></td></tr>
+<tr class="separator:a07e6ea97ebce81ea208f58309cc7f944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ac1c8f8ba6dec89066dc1721d0bb0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1process_1_1posix_1_1socket.html#a37ac1c8f8ba6dec89066dc1721d0bb0c">close</a> ()</td></tr>
 <tr class="memdesc:a37ac1c8f8ba6dec89066dc1721d0bb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the socket.  <a href="#a37ac1c8f8ba6dec89066dc1721d0bb0c">More...</a><br /></td></tr>
 <tr class="separator:a37ac1c8f8ba6dec89066dc1721d0bb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -346,8 +349,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aaadcd25ad297fc3ca9199f06a5ba7cc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaadcd25ad297fc3ca9199f06a5ba7cc8">&#9670;&nbsp;</a></span>read()</h2>
+<a id="ae6d3e49cdc4e6f548d9d2850d5697a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d3e49cdc4e6f548d9d2850d5697a8e">&#9670;&nbsp;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +359,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ssize_t cpen333::process::posix::socket::read </td>
+          <td class="memname">size_t cpen333::process::posix::socket::read </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>buff</em>, </td>
@@ -389,7 +392,54 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>number of bytes read, 0 if closed, or -1 if error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes read, 0 if closed or error </dd></dl>
+
+</div>
+</div>
+<a id="a07e6ea97ebce81ea208f58309cc7f944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e6ea97ebce81ea208f58309cc7f944">&#9670;&nbsp;</a></span>read_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cpen333::process::posix::socket::read_all </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads all data up to the specified size from the pipe. </p>
+<p>Read bytes from the head of the pipe, blocking if necessary until all bytes are read.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buff</td><td>memory address to fill with pipe contents </td></tr>
+    <tr><td class="paramname">size</td><td>number of bytes to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if read is successful, false if read is interrupted </dd></dl>
 
 </div>
 </div>
@@ -421,7 +471,7 @@ Friends</h2></td></tr>
 <p>This is potentially a blocking operation: if the socket buffer is full, this method will wait until there is room to write the entire contents of the string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>string to send </td></tr>
+    <tr><td class="paramname">str</td><td>string to send, length+1 must fit into a signed integer </td></tr>
   </table>
   </dd>
 </dl>

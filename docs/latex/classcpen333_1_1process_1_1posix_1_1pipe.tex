@@ -36,8 +36,10 @@ bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_a6aeb644645944b435c3292
 \begin{DoxyCompactList}\small\item\em Writes a string to the pipe, including the terminating zero. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_abb450a7e724dd5ad8fc364b2cc75c311}{write} (const void $\ast$buff, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Writes bytes to the pipe. \end{DoxyCompactList}\item 
-ssize\+\_\+t \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_af327b2c4db0cfd21cd5688ccff0f5eb0}{read} (void $\ast$buff, size\+\_\+t size)
+size\+\_\+t \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_a20e936e70690065c30f0600aa8f1b0d3}{read} (void $\ast$buff, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Reads bytes of data from a pipe. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_a8697e5c707442bce2eae0b9afbf44ac1}{read\+\_\+all} (void $\ast$buff, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reads all data up to the specified size from the pipe. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_af36dacdb81426f3dc76904bdcf1afc8f}{close} ()
 \begin{DoxyCompactList}\small\item\em Closes the pipe. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1posix_1_1pipe_ac1dd8e1a7fd46480b709e96190afe697}{unlink} ()
@@ -135,11 +137,11 @@ Move-\/assignment.
 \begin{DoxyReturn}{Returns}
 reference to myself 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_af327b2c4db0cfd21cd5688ccff0f5eb0}\label{classcpen333_1_1process_1_1posix_1_1pipe_af327b2c4db0cfd21cd5688ccff0f5eb0}} 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_a20e936e70690065c30f0600aa8f1b0d3}\label{classcpen333_1_1process_1_1posix_1_1pipe_a20e936e70690065c30f0600aa8f1b0d3}} 
 \index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!read@{read}}
 \index{read@{read}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
 \subsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily ssize\+\_\+t cpen333\+::process\+::posix\+::pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily size\+\_\+t cpen333\+::process\+::posix\+::pipe\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -153,7 +155,29 @@ Reads bytes of data from a pipe.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-number of bytes read, 0 if pipe is closed, or -\/1 if error 
+number of bytes read, 0 if pipe is closed or error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_a8697e5c707442bce2eae0b9afbf44ac1}\label{classcpen333_1_1process_1_1posix_1_1pipe_a8697e5c707442bce2eae0b9afbf44ac1}} 
+\index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!read\+\_\+all@{read\+\_\+all}}
+\index{read\+\_\+all@{read\+\_\+all}!cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}}
+\subsubsection{\texorpdfstring{read\+\_\+all()}{read\_all()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::pipe\+::read\+\_\+all (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads all data up to the specified size from the pipe. 
+
+Read bytes from the head of the pipe, blocking if necessary until all bytes are read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & memory address to fill with pipe contents \\
+\hline
+{\em size} & number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if read is successful, false if read is interrupted 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1pipe_ac1dd8e1a7fd46480b709e96190afe697}\label{classcpen333_1_1process_1_1posix_1_1pipe_ac1dd8e1a7fd46480b709e96190afe697}} 
 \index{cpen333\+::process\+::posix\+::pipe@{cpen333\+::process\+::posix\+::pipe}!unlink@{unlink}}
@@ -206,7 +230,7 @@ Writes a string to the pipe, including the terminating zero.
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & string to send \\
+{\em str} & string to send, length+1 must fit into a signed integer \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

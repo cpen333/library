@@ -28,8 +28,10 @@ bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a80d3d77a066ebc082196
 \begin{DoxyCompactList}\small\item\em Sends string through the socket, including the terminating zero. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a60ba24c07c24cfb34ef77b0f137cfc32}{write} (const void $\ast$buff, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Sends bytes through the socket. \end{DoxyCompactList}\item 
-ssize\+\_\+t \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_aaadcd25ad297fc3ca9199f06a5ba7cc8}{read} (void $\ast$buff, size\+\_\+t size)
+size\+\_\+t \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_ae6d3e49cdc4e6f548d9d2850d5697a8e}{read} (void $\ast$buff, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Receives bytes of data from a socket. \end{DoxyCompactList}\item 
+bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a07e6ea97ebce81ea208f58309cc7f944}{read\+\_\+all} (void $\ast$buff, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Reads all data up to the specified size from the pipe. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1posix_1_1socket_a37ac1c8f8ba6dec89066dc1721d0bb0c}{close} ()
 \begin{DoxyCompactList}\small\item\em Closes the socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
@@ -144,11 +146,11 @@ Move-\/assignment.
 \begin{DoxyReturn}{Returns}
 reference to myself 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_aaadcd25ad297fc3ca9199f06a5ba7cc8}\label{classcpen333_1_1process_1_1posix_1_1socket_aaadcd25ad297fc3ca9199f06a5ba7cc8}} 
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_ae6d3e49cdc4e6f548d9d2850d5697a8e}\label{classcpen333_1_1process_1_1posix_1_1socket_ae6d3e49cdc4e6f548d9d2850d5697a8e}} 
 \index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!read@{read}}
 \index{read@{read}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
 \subsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily ssize\+\_\+t cpen333\+::process\+::posix\+::socket\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily size\+\_\+t cpen333\+::process\+::posix\+::socket\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -164,7 +166,29 @@ This is a blocking operation\+: if there is no data, this method will wait until
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-number of bytes read, 0 if closed, or -\/1 if error 
+number of bytes read, 0 if closed or error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a07e6ea97ebce81ea208f58309cc7f944}\label{classcpen333_1_1process_1_1posix_1_1socket_a07e6ea97ebce81ea208f58309cc7f944}} 
+\index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!read\+\_\+all@{read\+\_\+all}}
+\index{read\+\_\+all@{read\+\_\+all}!cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}}
+\subsubsection{\texorpdfstring{read\+\_\+all()}{read\_all()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::posix\+::socket\+::read\+\_\+all (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads all data up to the specified size from the pipe. 
+
+Read bytes from the head of the pipe, blocking if necessary until all bytes are read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & memory address to fill with pipe contents \\
+\hline
+{\em size} & number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if read is successful, false if read is interrupted 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1posix_1_1socket_a80d3d77a066ebc082196bb2182021818}\label{classcpen333_1_1process_1_1posix_1_1socket_a80d3d77a066ebc082196bb2182021818}} 
 \index{cpen333\+::process\+::posix\+::socket@{cpen333\+::process\+::posix\+::socket}!write@{write}}
@@ -180,7 +204,7 @@ This is potentially a blocking operation\+: if the socket buffer is full, this m
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & string to send \\
+{\em str} & string to send, length+1 must fit into a signed integer \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

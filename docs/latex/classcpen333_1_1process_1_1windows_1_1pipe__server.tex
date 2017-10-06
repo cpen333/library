@@ -24,7 +24,7 @@ Inheritance diagram for cpen333\+:\+:process\+:\+:windows\+:\+:pipe\+\_\+server\
 \mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_acea2e918a6ba35f8eb856542ee697334}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_acea2e918a6ba35f8eb856542ee697334}} 
 \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_acea2e918a6ba35f8eb856542ee697334}{$\sim$pipe\+\_\+server} ()
 \begin{DoxyCompactList}\small\item\em Destructor, closes the pipe server. \end{DoxyCompactList}\item 
-bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}{start} ()
+bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a3d44407143efc64e27b5b6455ad8ae8c}{open} ()
 \begin{DoxyCompactList}\small\item\em Starts listening for connections. \end{DoxyCompactList}\item 
 bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_ab46c9f9214309d9d8bd8115758863259}{accept} (\hyperlink{classcpen333_1_1process_1_1windows_1_1pipe}{pipe} \&client)
 \begin{DoxyCompactList}\small\item\em Accepts a client connection. \end{DoxyCompactList}\item 
@@ -42,7 +42,7 @@ static bool \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a33351
 \subsection{Detailed Description}
 Pipe server. 
 
-Implementation of a named pipe server that listens for connections. The server is N\+OT started automatically. To start listening for connections, call the \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}{start()} function. 
+Implementation of a named pipe server that listens for connections. The server is N\+OT started automatically. To start listening for connections, call the \hyperlink{classcpen333_1_1process_1_1windows_1_1pipe__server_a3d44407143efc64e27b5b6455ad8ae8c}{open()} function. 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_ab46c9f9214309d9d8bd8115758863259}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_ab46c9f9214309d9d8bd8115758863259}} 
@@ -78,11 +78,11 @@ Close the server socket.
 \begin{DoxyReturn}{Returns}
 true if successful, false otherwise 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_a154fb75caf8fc068ab2d6a0a70e96bc9}} 
-\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}!start@{start}}
-\index{start@{start}!cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
-\subsubsection{\texorpdfstring{start()}{start()}}
-{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::pipe\+\_\+server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classcpen333_1_1process_1_1windows_1_1pipe__server_a3d44407143efc64e27b5b6455ad8ae8c}\label{classcpen333_1_1process_1_1windows_1_1pipe__server_a3d44407143efc64e27b5b6455ad8ae8c}} 
+\index{cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}!open@{open}}
+\index{open@{open}!cpen333\+::process\+::windows\+::pipe\+\_\+server@{cpen333\+::process\+::windows\+::pipe\+\_\+server}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool cpen333\+::process\+::windows\+::pipe\+\_\+server\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
