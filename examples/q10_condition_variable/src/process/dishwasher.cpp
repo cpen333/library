@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
 
     std::cout << "Dishwasher " << id << " taking a break" << std::endl;
 
-    // wait until there are at least 20 dirty dishes (or it's quitting time, otherwise we may get stuck here)
+    // wait until there are at least 50 dirty dishes (or it's quitting time, otherwise we may get stuck here)
     cv.wait(lock, [&dishes]() { return dishes->dirty > 50 || dishes->quit; });
 
     std::cout << "Dishwasher " << id << " starting to wash dishes" << std::endl;

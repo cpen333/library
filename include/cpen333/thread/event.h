@@ -239,7 +239,7 @@ class event {
         if (--(waiters_.unblock) == 0) {
           if (waiters_.blocked != 0) {
             block_lock_.notify();   // allow one more through
-            signals_left = 0;     // let him take care of rest
+            signals_left = 0;       // let him take care of rest
           } else {
             // take waiters_.gone out of shared memory
             waiters_gone = waiters_.gone;

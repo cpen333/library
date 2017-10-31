@@ -352,7 +352,7 @@ class fifo {
 
   // only to be called internally, does not wait for semaphore
   void push_item(const ValueType &val) {
-    // lock is fast (only index increment), so will not trigger wait
+
     int loc = 0;
     {
       // look at index, protect memory from multiple simultaneous pushes
@@ -362,16 +362,17 @@ class fifo {
       if ((++info_.pidx) == info_.size) {
         info_.pidx = 0;
       }
+
+      // copy data to correct location
+      data_[loc] = val;  // add item to fifo
+
       // lock will unlock here as guard runs out of scope
     }
 
-    // copy data to correct location
-    data_[loc] = val;  // add item to fifo
   }
 
   // only to be called internally, does not wait for semaphore
   void push_item(ValueType &&val) {
-    // lock is fast (only index increment), so will not trigger wait
     int loc = 0;
     {
       // look at index, protect memory from multiple simultaneous pushes
@@ -381,31 +382,29 @@ class fifo {
       if ((++info_.pidx) == info_.size) {
         info_.pidx = 0;
       }
+
+      // copy data to correct location
+      data_[loc] = std::move(val);  // add item to fifo
+
       // lock will unlock here as guard runs out of scope
     }
-
-    // copy data to correct location
-    data_[loc] = std::move(val);  // add item to fifo
   }
 
   void peek_item(ValueType* val) {
-    // lock is fast (only index increment), so will not trigger wait
     int loc = 0;  // will store location of item to take
     {
       // look at index, protect memory from multiple simultaneous pops
       std::lock_guard<std::mutex> lock(cmutex_);
       loc = info_.cidx;
+      // copy data to output
+      if (val != nullptr) {
+        *val = data_[loc];  // copy item out
+      }
       // lock will unlock here as guard runs out of scope
-    }
-
-    // copy data to output
-    if (val != nullptr) {
-      *val = data_[loc];  // copy item out
     }
   }
 
   void pop_item(ValueType* val) {
-    // lock is fast (only index increment), so will not trigger wait
     int loc = 0;  // will store location of item to take
     {
       // look at index, protect memory from multiple simultaneous pops
@@ -416,12 +415,11 @@ class fifo {
       if ( (++info_.cidx) == info_.size) {
         info_.cidx = 0;
       }
+      // copy data to output
+      if (val != nullptr) {
+        *val = std::move(data_[loc]);  // move item out
+      }
       // lock will unlock here as guard runs out of scope
-    }
-
-    // copy data to output
-    if (val != nullptr) {
-      *val = std::move(data_[loc]);  // move item out
     }
   }
 

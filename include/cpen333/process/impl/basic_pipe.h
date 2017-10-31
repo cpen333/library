@@ -112,12 +112,11 @@ class basic_pipe : public virtual named_resource {
       if ((++(info_->write)) == info_->size) {
         info_->write = 0;
       }
-      lock.unlock();
 
-      // do actual write outside of lock for efficiency
-      // (though here it is only one byte...)
       pipe_[pos] = *ptr;
       ++ptr;
+
+      lock.unlock();
 
       producer_.notify();  // byte available for read
     }
@@ -219,12 +218,12 @@ class basic_pipe : public virtual named_resource {
       if ((++(info_->read)) == info_->size) {
         info_->read = 0;
       }
-      lock.unlock();
 
-      // do the actualy write
+      // do the actual write
       *ptr = pipe_[pos];
       ++ptr;  // advance ptr
 
+      lock.unlock();
       consumer_.notify();  // byte available for writing
     }
 

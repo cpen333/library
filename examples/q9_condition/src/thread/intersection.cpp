@@ -68,9 +68,9 @@ int main() {
     std::cout << std::endl << "Red Light" << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(2));   // wait a suitable time delay between lights changing
     std::cout << std::endl << "Walk on" << std::endl;
-    safetowalk.notify();                                   // allow pedestrians to cross
+    safetowalk.notify();                                    // allow pedestrians to cross
     std::this_thread::sleep_for(std::chrono::seconds(15));  // allow pedestrians to cross for 15 seconds
-    safetowalk.reset();                                    // stop pedestrians
+    safetowalk.reset();                                     // stop pedestrians
     std::cout << std::endl <<  "No Walking" << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(2));   // wait a suitable time delay between lights changing
 
