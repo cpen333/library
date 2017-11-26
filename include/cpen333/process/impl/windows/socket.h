@@ -25,6 +25,12 @@
 #include <algorithm>
 #include <winsock2.h>
 #include <ws2tcpip.h>
+#ifndef WIN32_LEAN_AND_MEAN
+/**
+* @brief Prevent inclusion of old winsock
+*/
+#define WIN32_LEAN_AND_MEAN
+#endif
 #include <windows.h>
 #include <mutex>
 

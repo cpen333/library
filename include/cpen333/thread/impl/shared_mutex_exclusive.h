@@ -27,7 +27,7 @@ namespace impl {
 class shared_mutex_exclusive {
  private:
 
-  std::mutex mutex_;                        // mutex for shared access
+  std::mutex mutex_;                         // mutex for shared access
   cpen333::thread::semaphore global_;        // global semaphore
   size_t shared_count_;
   size_t exclusive_count_;

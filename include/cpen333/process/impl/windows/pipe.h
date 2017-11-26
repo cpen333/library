@@ -11,6 +11,12 @@
  * @brief Prevent windows from defining min(), max() macros
  */
 #define NOMINMAX 1
+#ifndef WIN32_LEAN_AND_MEAN
+/**
+* @brief Prevent inclusion of old winsock
+*/
+#define WIN32_LEAN_AND_MEAN
+#endif
 #include <windows.h>
 #include <cstdint>
 #include <mutex>

@@ -32,11 +32,20 @@ class thread_object {
    */
   thread_object() : thread_(nullptr), terminated_(false), result_(0) {}
 
+  /**
+   * @brief Move constructor for thread for passing around
+   * @param other object to move
+   */
   thread_object(thread_object && other) :
       thread_(other.thread_), terminated_(other.terminated_), result_(other.result_) {
     other.thread_ = nullptr;
   }
 
+  /**
+   * @brief Move assignment operator for thread to move around
+   * @param other thread to move
+   * @return new thread
+   */
   thread_object &operator=(thread_object && other) {
     thread_ = other.thread_;
     terminated_ = other.terminated_;

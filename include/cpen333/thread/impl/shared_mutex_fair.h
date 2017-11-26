@@ -29,7 +29,6 @@ class shared_mutex_fair {
   struct shared_data {
     size_t shared[2];   // readers or queued
     char this_batch;    // index within shared of current batch sharing access
-    char next_batch;    // index within shared of next batch to push, 1-this_batch
     char exclusive;     // # exclusive access, 0 or 1
     size_t etotal;      // waiting and exclusive access
   };
@@ -52,7 +51,6 @@ class shared_mutex_fair {
     state_.shared[0] = 0;
     state_.shared[1] = 0;
     state_.this_batch = 0;
-    state_.next_batch = 1;
     state_.exclusive = 0;
     state_.etotal = 0;
      
