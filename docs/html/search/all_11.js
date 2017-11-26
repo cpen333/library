@@ -6,7 +6,7 @@ var searchData=
   ['test',['test',['../classcpen333_1_1thread_1_1timer.html#af81a4656b66d8bebd7497ffe826f4373',1,'cpen333::thread::timer']]],
   ['test_5fand_5freset',['test_and_reset',['../classcpen333_1_1thread_1_1timer.html#a6fc134f093e0ff35ef1baebefd62ed8b',1,'cpen333::thread::timer']]],
   ['test_5fstdin',['test_stdin',['../util_8h.html#a68b5b8834128fc802ed44d31064c0416',1,'cpen333']]],
-  ['thread_5fobject',['thread_object',['../classcpen333_1_1thread_1_1thread__object.html',1,'cpen333::thread::thread_object'],['../classcpen333_1_1thread_1_1thread__object.html#a1e15fda903a0e1bbc0c06fc7d870d0d9',1,'cpen333::thread::thread_object::thread_object()']]],
+  ['thread_5fobject',['thread_object',['../classcpen333_1_1thread_1_1thread__object.html',1,'cpen333::thread::thread_object'],['../classcpen333_1_1thread_1_1thread__object.html#a1e15fda903a0e1bbc0c06fc7d870d0d9',1,'cpen333::thread::thread_object::thread_object()'],['../classcpen333_1_1thread_1_1thread__object.html#adb6e805de4cf351471b100fe18254255',1,'cpen333::thread::thread_object::thread_object(thread_object &amp;&amp;other)']]],
   ['thread_5fobject_2eh',['thread_object.h',['../thread__object_8h.html',1,'']]],
   ['timed_5fmutex',['timed_mutex',['../impl_2posix_2mutex_8h.html#afc3467b58c253841e0787b26c1928b5f',1,'cpen333::process']]],
   ['timer',['timer',['../classcpen333_1_1thread_1_1timer.html',1,'cpen333::thread::timer&lt; Duration &gt;'],['../classcpen333_1_1thread_1_1timer.html#adf189ddfc276e7efa2c49ac9413627b9',1,'cpen333::thread::timer::timer(const Duration &amp;period)'],['../classcpen333_1_1thread_1_1timer.html#a8eb8ec006064a7eed1f63d1ae2c74acd',1,'cpen333::thread::timer::timer(const Duration &amp;period, Func &amp;&amp;func)']]],

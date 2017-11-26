@@ -84,6 +84,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html#a1e15fda903a0e1bbc0c06fc7d870d0d9">thread_object</a> ()</td></tr>
 <tr class="memdesc:a1e15fda903a0e1bbc0c06fc7d870d0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the thread base. <br /></td></tr>
 <tr class="separator:a1e15fda903a0e1bbc0c06fc7d870d0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6e805de4cf351471b100fe18254255"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html#adb6e805de4cf351471b100fe18254255">thread_object</a> (<a class="el" href="classcpen333_1_1thread_1_1thread__object.html">thread_object</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:adb6e805de4cf351471b100fe18254255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor for thread for passing around.  <a href="#adb6e805de4cf351471b100fe18254255">More...</a><br /></td></tr>
+<tr class="separator:adb6e805de4cf351471b100fe18254255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae4bff517bb0a97e5f52820d99d3a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html">thread_object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html#acae4bff517bb0a97e5f52820d99d3a5d">operator=</a> (<a class="el" href="classcpen333_1_1thread_1_1thread__object.html">thread_object</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:acae4bff517bb0a97e5f52820d99d3a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator for thread to move around.  <a href="#acae4bff517bb0a97e5f52820d99d3a5d">More...</a><br /></td></tr>
+<tr class="separator:acae4bff517bb0a97e5f52820d99d3a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addcca372aa82c04d454ade7fd60d1e75"><td class="memItemLeft" align="right" valign="top"><a id="addcca372aa82c04d454ade7fd60d1e75"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html#addcca372aa82c04d454ade7fd60d1e75">~thread_object</a> ()</td></tr>
 <tr class="memdesc:addcca372aa82c04d454ade7fd60d1e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor, frees the thread. <br /></td></tr>
@@ -115,7 +121,42 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Base object-oriented thread object. </p>
 <p>Virtual object with a <a class="el" href="classcpen333_1_1thread_1_1thread__object.html#adbd74f6f7461d90a1c12e8078aa5f3af" title="Main execution method of thread. ">main()</a> method that must be overridden which will execute once the thread is started. Also has functionality to return the returned value of <a class="el" href="classcpen333_1_1thread_1_1thread__object.html#adbd74f6f7461d90a1c12e8078aa5f3af" title="Main execution method of thread. ">main()</a>.</p>
 <p>The thread is NOT started automatically (nor should it be due to memory access concerns). </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adb6e805de4cf351471b100fe18254255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb6e805de4cf351471b100fe18254255">&#9670;&nbsp;</a></span>thread_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cpen333::thread::thread_object::thread_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html">thread_object</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor for thread for passing around. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>object to move </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac7334918eabfcf855cec00ed2a68a039"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7334918eabfcf855cec00ed2a68a039">&#9670;&nbsp;</a></span>join()</h2>
 
@@ -199,6 +240,41 @@ Protected Member Functions</h2></td></tr>
 
 <p>Main execution method of thread. </p>
 <dl class="section return"><dt>Returns</dt><dd>main return value </dd></dl>
+
+</div>
+</div>
+<a id="acae4bff517bb0a97e5f52820d99d3a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae4bff517bb0a97e5f52820d99d3a5d">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html">thread_object</a>&amp; cpen333::thread::thread_object::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcpen333_1_1thread_1_1thread__object.html">thread_object</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator for thread to move around. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>thread to move </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>new thread </dd></dl>
 
 </div>
 </div>

@@ -15,6 +15,10 @@ Base object-\/oriented thread object.
 \mbox{\Hypertarget{classcpen333_1_1thread_1_1thread__object_a1e15fda903a0e1bbc0c06fc7d870d0d9}\label{classcpen333_1_1thread_1_1thread__object_a1e15fda903a0e1bbc0c06fc7d870d0d9}} 
 \hyperlink{classcpen333_1_1thread_1_1thread__object_a1e15fda903a0e1bbc0c06fc7d870d0d9}{thread\+\_\+object} ()
 \begin{DoxyCompactList}\small\item\em Constructs the thread base. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1thread_1_1thread__object_adb6e805de4cf351471b100fe18254255}{thread\+\_\+object} (\hyperlink{classcpen333_1_1thread_1_1thread__object}{thread\+\_\+object} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move constructor for thread for passing around. \end{DoxyCompactList}\item 
+\hyperlink{classcpen333_1_1thread_1_1thread__object}{thread\+\_\+object} \& \hyperlink{classcpen333_1_1thread_1_1thread__object_acae4bff517bb0a97e5f52820d99d3a5d}{operator=} (\hyperlink{classcpen333_1_1thread_1_1thread__object}{thread\+\_\+object} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move assignment operator for thread to move around. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classcpen333_1_1thread_1_1thread__object_addcca372aa82c04d454ade7fd60d1e75}\label{classcpen333_1_1thread_1_1thread__object_addcca372aa82c04d454ade7fd60d1e75}} 
 \hyperlink{classcpen333_1_1thread_1_1thread__object_addcca372aa82c04d454ade7fd60d1e75}{$\sim$thread\+\_\+object} ()
 \begin{DoxyCompactList}\small\item\em Destructor, frees the thread. \end{DoxyCompactList}\item 
@@ -42,6 +46,24 @@ Base object-\/oriented thread object.
 Virtual object with a \hyperlink{classcpen333_1_1thread_1_1thread__object_adbd74f6f7461d90a1c12e8078aa5f3af}{main()} method that must be overridden which will execute once the thread is started. Also has functionality to return the returned value of \hyperlink{classcpen333_1_1thread_1_1thread__object_adbd74f6f7461d90a1c12e8078aa5f3af}{main()}.
 
 The thread is N\+OT started automatically (nor should it be due to memory access concerns). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcpen333_1_1thread_1_1thread__object_adb6e805de4cf351471b100fe18254255}\label{classcpen333_1_1thread_1_1thread__object_adb6e805de4cf351471b100fe18254255}} 
+\index{cpen333\+::thread\+::thread\+\_\+object@{cpen333\+::thread\+::thread\+\_\+object}!thread\+\_\+object@{thread\+\_\+object}}
+\index{thread\+\_\+object@{thread\+\_\+object}!cpen333\+::thread\+::thread\+\_\+object@{cpen333\+::thread\+::thread\+\_\+object}}
+\subsubsection{\texorpdfstring{thread\+\_\+object()}{thread\_object()}}
+{\footnotesize\ttfamily cpen333\+::thread\+::thread\+\_\+object\+::thread\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1thread_1_1thread__object}{thread\+\_\+object} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move constructor for thread for passing around. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & object to move \\
+\hline
+\end{DoxyParams}
+
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classcpen333_1_1thread_1_1thread__object_ac7334918eabfcf855cec00ed2a68a039}\label{classcpen333_1_1thread_1_1thread__object_ac7334918eabfcf855cec00ed2a68a039}} 
@@ -86,6 +108,24 @@ Main execution method of thread.
 
 \begin{DoxyReturn}{Returns}
 main return value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcpen333_1_1thread_1_1thread__object_acae4bff517bb0a97e5f52820d99d3a5d}\label{classcpen333_1_1thread_1_1thread__object_acae4bff517bb0a97e5f52820d99d3a5d}} 
+\index{cpen333\+::thread\+::thread\+\_\+object@{cpen333\+::thread\+::thread\+\_\+object}!operator=@{operator=}}
+\index{operator=@{operator=}!cpen333\+::thread\+::thread\+\_\+object@{cpen333\+::thread\+::thread\+\_\+object}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classcpen333_1_1thread_1_1thread__object}{thread\+\_\+object}\& cpen333\+::thread\+::thread\+\_\+object\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{classcpen333_1_1thread_1_1thread__object}{thread\+\_\+object} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move assignment operator for thread to move around. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & thread to move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new thread 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcpen333_1_1thread_1_1thread__object_ae4484909a3f4418c0c0db318d615bde1}\label{classcpen333_1_1thread_1_1thread__object_ae4484909a3f4418c0c0db318d615bde1}} 
 \index{cpen333\+::thread\+::thread\+\_\+object@{cpen333\+::thread\+::thread\+\_\+object}!start@{start}}
