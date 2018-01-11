@@ -379,7 +379,7 @@ class socket {
 
     int blocksize = (int)(std::min<size_t>(std::numeric_limits<int>::max(), size));
     int result = recv(socket_, (char*)buff, blocksize, 0);
-    if (result == -1) {
+    if (result == SOCKET_ERROR) {
       cpen333::perror(std::string("recv(...) failed with error: ")
                          + std::to_string(WSAGetLastError()));
       return 0;
@@ -522,19 +522,23 @@ class socket_server {
       socket_ = INVALID_SOCKET;
       return false;
     }
-    freeaddrinfo(addrresult);
 
     if (port_ == 0) {
-      struct sockaddr_in sin;
-      int addrlen = sizeof(sin);
-      status = getsockname(socket_, (struct sockaddr *)&sin, &addrlen);
+      int addrlen = addrresult->ai_addrlen;
+      status = getsockname(socket_, addrresult->ai_addr, &addrlen);
       if(status == 0 ) {
-        port_ = ntohs(sin.sin_port);
+        struct sockaddr_in* sin = (struct sockaddr_in*)(addrresult->ai_addr);
+        port_ = ntohs(sin->sin_port);
       } else {
         cpen333::perror(std::string("getsockname(...) failed with error: ")
                            + std::to_string(status));
+        closesocket(socket_);
+        socket_ = INVALID_SOCKET;
+        return false;
       }
     }
+
+    freeaddrinfo(addrresult);
 
     // start listening
     status = listen(socket_, SOMAXCONN);

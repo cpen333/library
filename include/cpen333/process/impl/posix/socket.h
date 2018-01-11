@@ -379,19 +379,23 @@ class socket_server {
       socket_ = INVALID_SOCKET;
       return false;
     }
-    freeaddrinfo(addrresult);
 
     if (port_ == 0) {
-      struct sockaddr_in sin;
-      socklen_t addrlen = sizeof(sin);
-      status = getsockname(socket_, (struct sockaddr *)&sin, &addrlen);
+      socklen_t addrlen = addrresult->ai_addrlen;
+      status = getsockname(socket_, addrresult->ai_addr, &addrlen);
       if(status == 0 ) {
-        port_ = ntohs(sin.sin_port);
+        struct sockaddr_in* sin = (struct sockaddr_in*)(addrresult->ai_addr);
+        port_ = ntohs(sin->sin_port);
       } else {
-        cpen333::error(std::string("getsockname(...) failed with error: ")
-                           + std::to_string(status));
+        cpen333::perror(std::string("getsockname(...) failed with error: ")
+                            + std::to_string(status));
+        ::close(socket_);
+        socket_ = INVALID_SOCKET;
+        return false;
       }
     }
+
+    freeaddrinfo(addrresult);
 
     status = listen(socket_, SOMAXCONN);
     if (status == SOCKET_ERROR) {
