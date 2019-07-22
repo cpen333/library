@@ -1,6 +1,6 @@
 # Processes and Threads Library and Examples
 
-Course library and examples for CPEN333 - System Software Engineering (University of British Columbia)
+Course library and examples for System Software Engineering (University of British Columbia)
 
 Includes a cross-platform header-only library for
 - Process/thread synchronization
@@ -16,7 +16,7 @@ Usage:
 ## Documentation
 
 The main library is heavily documented in-code using [Doxygen](http://www.stack.nl/~dimitri/doxygen/download.html).  A compiled version can be viewed here:
-- https://cpen333.github.io/library/
+- https://ubc333.github.io/library/
 
 ## Building the Examples
 
