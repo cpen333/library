@@ -1,4 +1,4 @@
-# CPEN333 - Processes and Threads Library and Examples
+# Processes and Threads Library and Examples
 
 Course library and examples for CPEN333 - System Software Engineering (University of British Columbia)
 
