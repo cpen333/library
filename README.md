@@ -30,7 +30,7 @@ The examples *should* compile and run on most platforms and with most IDEs.  I h
 ### Download the repository:
 Open a terminal (or command-prompt) and clone the repository
 ```
-> git clone https://github.com/cpen333/library.git
+> git clone https://github.com/ubc333/library.git
 > cd library
 ```
 Otherwise, you can download the zip file, extract it somewhere, and navigate to that folder in the terminal.
